@@ -1,0 +1,42 @@
+====================================================================================================
+Behavioral Variation Report
+====================================================================================================
+
+Participants with high variation (3):
+----------------------------------------------------------------------
+Person_11:
+ Final score: 1.000 | Cluster: 1
+ Distance score: 7.091530802783968
+ Mahalanobis score: 7.092
+ Consistency score: 11.764
+
+Person_1:
+ Final score: 0.894 | Cluster: 2
+ Distance score: 6.270530437251001
+ Mahalanobis score: 6.271
+ Consistency score: 11.004
+
+Person_10:
+ Final score: 0.864 | Cluster: 0
+ Distance score: 6.032465408825393
+ Mahalanobis score: 6.032
+ Consistency score: 10.817
+
+
+ Overall Statistics:
+--------------------------------------------------
+ Total participants analized: 3
+ Participants with hight variation: 3 (100.0%)
+ Participants with medium variation: 0 (0.0%)
+ Participants with low variation: 0 (0.0%)
+ Participants with minimal variation: 0 (0.0%)
+ Total number of participants with behavioral variation: 3 (100.0%)
+
+ Cluster Distribution:
+==============================
+ Cluster 2: 1 participants
+ HIGH: 1 | MEDIUM: 0 | LOW: 0 | NONE: 0
+ Cluster 0: 1 participants
+ HIGH: 1 | MEDIUM: 0 | LOW: 0 | NONE: 0
+ Cluster 1: 1 participants
+ HIGH: 1 | MEDIUM: 0 | LOW: 0 | NONE: 0

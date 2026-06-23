@@ -1,0 +1,142 @@
+====================================================================================================
+Behavioral Variation Report
+====================================================================================================
+
+Participants with high variation (3):
+----------------------------------------------------------------------
+Person_7:
+ Final score: 1.000 | Cluster: 1
+ Distance score: 11.111937588492836
+ Mahalanobis score: 11.112
+ Consistency score: 13.107
+
+Person_9:
+ Final score: 0.875 | Cluster: 1
+ Distance score: 9.645826056219088
+ Mahalanobis score: 9.646
+ Consistency score: 11.830
+
+Person_8:
+ Final score: 0.721 | Cluster: 0
+ Distance score: 7.819076766173746
+ Mahalanobis score: 7.819
+ Consistency score: 10.362
+
+
+Participants with medium variation (10):
+----------------------------------------------------------------------
+Person_4:
+ Final score: 0.642 | Cluster: 0
+ Distance score: 6.869329895996115
+ Mahalanobis score: 6.869
+ Consistency score: 9.672
+
+Person_12:
+ Final score: 0.617 | Cluster: 0
+ Distance score: 6.589440182732624
+ Mahalanobis score: 6.589
+ Consistency score: 9.362
+
+Person_11:
+ Final score: 0.610 | Cluster: 0
+ Distance score: 6.5016783575384745
+ Mahalanobis score: 6.502
+ Consistency score: 9.286
+
+Person_10:
+ Final score: 0.595 | Cluster: 1
+ Distance score: 6.31307167802903
+ Mahalanobis score: 6.313
+ Consistency score: 9.225
+
+Person_16:
+ Final score: 0.592 | Cluster: 0
+ Distance score: 6.282814250059246
+ Mahalanobis score: 6.283
+ Consistency score: 9.165
+
+Person_5:
+ Final score: 0.561 | Cluster: 1
+ Distance score: 5.875267415485872
+ Mahalanobis score: 5.875
+ Consistency score: 9.023
+
+Person_13:
+ Final score: 0.556 | Cluster: 0
+ Distance score: 5.861274888189804
+ Mahalanobis score: 5.861
+ Consistency score: 8.808
+
+Person_17:
+ Final score: 0.516 | Cluster: 0
+ Distance score: 5.381265397971023
+ Mahalanobis score: 5.381
+ Consistency score: 8.456
+
+Person_2:
+ Final score: 0.507 | Cluster: 0
+ Distance score: 5.26457323952545
+ Mahalanobis score: 5.265
+ Consistency score: 8.362
+
+Person_14:
+ Final score: 0.504 | Cluster: 0
+ Distance score: 5.23959514214666
+ Mahalanobis score: 5.240
+ Consistency score: 8.293
+
+
+Participants with low variation (6):
+----------------------------------------------------------------------
+Person_1:
+ Final score: 0.491 | Cluster: 0
+ Distance score: 5.0468460963731605
+ Mahalanobis score: 5.047
+ Consistency score: 8.349
+
+Person_15:
+ Final score: 0.470 | Cluster: 0
+ Distance score: 4.83949808375771
+ Mahalanobis score: 4.839
+ Consistency score: 7.996
+
+Person_19:
+ Final score: 0.468 | Cluster: 0
+ Distance score: 4.788382633021719
+ Mahalanobis score: 4.788
+ Consistency score: 8.101
+
+Person_18:
+ Final score: 0.466 | Cluster: 0
+ Distance score: 4.780925565400617
+ Mahalanobis score: 4.781
+ Consistency score: 8.011
+
+Person_3:
+ Final score: 0.412 | Cluster: 0
+ Distance score: 4.049124138105667
+ Mahalanobis score: 4.049
+ Consistency score: 7.885
+
+Person_6:
+ Final score: 0.361 | Cluster: 0
+ Distance score: 3.4487104396870842
+ Mahalanobis score: 3.449
+ Consistency score: 7.412
+
+
+ Overall Statistics:
+--------------------------------------------------
+ Total participants analized: 19
+ Participants with hight variation: 3 (15.8%)
+ Participants with medium variation: 10 (52.6%)
+ Participants with low variation: 6 (31.6%)
+ Participants with minimal variation: 0 (0.0%)
+ Total number of participants with behavioral variation: 19 (100.0%)
+
+ Cluster Distribution:
+==============================
+ Cluster 0: 15 participants
+ HIGH: 1 | MEDIUM: 8 | LOW: 6 | NONE: 0
+ Cluster 1: 4 participants
+ HIGH: 2 | MEDIUM: 2 | LOW: 0 | NONE: 0

@@ -1,0 +1,1094 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{Afdideh2025}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d40695c8ebbbcefe11ba8a49909ff4a1}{%
+           family={Afdideh},
+           familyi={A\bibinitperiod},
+           given={Fardin},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5b90b3f6a5cd1034e537e524127f129f}{%
+           family={Shamsollahi},
+           familyi={S\bibinitperiod},
+           given={Mohammad\bibnamedelima Bagher},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9c16afb62b629911b0b2b55fa477a552}
+      \strng{fullhash}{9c16afb62b629911b0b2b55fa477a552}
+      \strng{fullhashraw}{9c16afb62b629911b0b2b55fa477a552}
+      \strng{bibnamehash}{9c16afb62b629911b0b2b55fa477a552}
+      \strng{authorbibnamehash}{9c16afb62b629911b0b2b55fa477a552}
+      \strng{authornamehash}{9c16afb62b629911b0b2b55fa477a552}
+      \strng{authorfullhash}{9c16afb62b629911b0b2b55fa477a552}
+      \strng{authorfullhashraw}{9c16afb62b629911b0b2b55fa477a552}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biomedical Physics \& Engineering express}
+      \field{number}{-}
+      \field{title}{Subject-specific feature extraction approach for a three-class motor imagery-based brain-computer interface enabling navigation in a virtual environment: open-access framework}
+      \field{volume}{-}
+      \field{year}{2025}
+      \field{pages}{-}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb https://doi.org/10.1088/2057-1976/aded19
+      \endverb
+      \warn{\item Range field 'pages' in entry 'Afdideh2025' is malformed, falling back to literal}
+    \endentry
+    \entry{Angerbauer2024}{article}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=db622a236caab8dff00122a5b7284378}{%
+           family={Angerbauer},
+           familyi={A\bibinitperiod},
+           given={Katrin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebb445723ad5f5200f02b2b235c529d2}{%
+           family={Wagoner},
+           familyi={W\bibinitperiod},
+           given={Phoenix\bibnamedelima Van},
+           giveni={P\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=66b86a4280b4cd8ca64834cea4447b44}{%
+           family={Halach},
+           familyi={H\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5032db42f1e125fc9a5bd34839693dfa}{%
+           family={Vogelsang},
+           familyi={V\bibinitperiod},
+           given={Jonas},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c7ee6bd120e8064e174635c872ce11cf}{%
+           family={Hube},
+           familyi={H\bibinitperiod},
+           given={Natalie},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8f015303bd47eb7344ae590c1a0aeecf}{%
+           family={Smithand},
+           familyi={S\bibinitperiod},
+           given={Andria},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=293998fab129197f2ee23a3046ea7387}{%
+           family={Keplinger},
+           familyi={K\bibinitperiod},
+           given={Ksenia},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7613acc9e67abb0fc4d410f2803f868c}{%
+           family={Sedlmair},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e6df71903859e2be3d0748140634e6ce}
+      \strng{fullhash}{cdc88d49def36b5fba2ea85e38226710}
+      \strng{fullhashraw}{cdc88d49def36b5fba2ea85e38226710}
+      \strng{bibnamehash}{cdc88d49def36b5fba2ea85e38226710}
+      \strng{authorbibnamehash}{cdc88d49def36b5fba2ea85e38226710}
+      \strng{authornamehash}{e6df71903859e2be3d0748140634e6ce}
+      \strng{authorfullhash}{cdc88d49def36b5fba2ea85e38226710}
+      \strng{authorfullhashraw}{cdc88d49def36b5fba2ea85e38226710}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ASSETS '24: Proceedings of the 26th International ACM SIGACCESS Conference on Computers and Accessibility}
+      \field{number}{54}
+      \field{title}{Is it Part of Me? Exploring Experiences of Inclusive Avatar Use For Visible and Invisible Disabilities in Social VR}
+      \field{year}{2024}
+      \verb{doi}
+      \verb https://doi.org/10.1145/3663548.367560
+      \endverb
+    \endentry
+    \entry{bellman1957dynamic}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d73b44ef64f8587cce9a1c9fe47a4bcb}{%
+           family={Bellman},
+           familyi={B\bibinitperiod},
+           given={Richard\bibnamedelima Ernest},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Princeton, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{d73b44ef64f8587cce9a1c9fe47a4bcb}
+      \strng{fullhash}{d73b44ef64f8587cce9a1c9fe47a4bcb}
+      \strng{fullhashraw}{d73b44ef64f8587cce9a1c9fe47a4bcb}
+      \strng{bibnamehash}{d73b44ef64f8587cce9a1c9fe47a4bcb}
+      \strng{authorbibnamehash}{d73b44ef64f8587cce9a1c9fe47a4bcb}
+      \strng{authornamehash}{d73b44ef64f8587cce9a1c9fe47a4bcb}
+      \strng{authorfullhash}{d73b44ef64f8587cce9a1c9fe47a4bcb}
+      \strng{authorfullhashraw}{d73b44ef64f8587cce9a1c9fe47a4bcb}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Dynamic Programming}
+      \field{year}{1957}
+    \endentry
+    \entry{Fregna2025}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=cb0e22f409083ab723961b585874cad3}{%
+           family={Fregna},
+           familyi={F\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d876b9a3d8664fca05a2c4fa5003ff27}{%
+           family={Perachiotti},
+           familyi={P\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=dfcf28d0734569a6a693bc8194de62bf}{%
+           family={G.},
+           familyi={G\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=64484e999f27a96dc798125efbeffea1}{%
+           family={Baroni},
+           familyi={B\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=7fc56270e7a70fa81a5935b72eacbe29}{%
+           family={A.},
+           familyi={A\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=38026ba4ee6b102b47bf3ffb41325c8f}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{9786cae0cd03f82f7530afe6dcc963b6}
+      \strng{fullhash}{2a884976abd596a51a97ad156632042b}
+      \strng{fullhashraw}{2a884976abd596a51a97ad156632042b}
+      \strng{bibnamehash}{2a884976abd596a51a97ad156632042b}
+      \strng{authorbibnamehash}{2a884976abd596a51a97ad156632042b}
+      \strng{authornamehash}{9786cae0cd03f82f7530afe6dcc963b6}
+      \strng{authorfullhash}{2a884976abd596a51a97ad156632042b}
+      \strng{authorfullhashraw}{2a884976abd596a51a97ad156632042b}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of NeuroEngineering and Rehabilitation}
+      \field{number}{251}
+      \field{title}{Fatigue influences embodiment perception and motor performance in multiple sclerosis subjects: a cross-sectional immersive virtual reality study}
+      \field{volume}{22}
+      \field{year}{2025}
+      \verb{doi}
+      \verb https://doi.org/10.1186/s12984-025-01788-5
+      \endverb
+    \endentry
+    \entry{Julayanont2013}{inbook}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=96953296d56ec7a731e6589f9b1e3529}{%
+           family={Julayanont},
+           familyi={J\bibinitperiod},
+           given={Parunyou},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0426f317980b8ecf482b0e13e7a383ed}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={Natalie},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28b5c3b16b2cd8a71b9ac63e84ef84eb}{%
+           family={Chertkow},
+           familyi={C\bibinitperiod},
+           given={Howard},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c08e3cf9822ca8931ac787353e56b2ad}{%
+           family={Nasreddine},
+           familyi={N\bibinitperiod},
+           given={Ziad\bibnamedelima S.},
+           giveni={Z\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=52528c9c3276e4d5714103c73b451bf5}{%
+           family={Larner},
+           familyi={L\bibinitperiod},
+           given={A.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {Springer London}%
+      }
+      \strng{namehash}{62bb0157677dfcf032a9f6c242d79aa0}
+      \strng{fullhash}{b41db0a87cad0cdfbd1dba65f9d1af27}
+      \strng{fullhashraw}{b41db0a87cad0cdfbd1dba65f9d1af27}
+      \strng{bibnamehash}{b41db0a87cad0cdfbd1dba65f9d1af27}
+      \strng{authorbibnamehash}{b41db0a87cad0cdfbd1dba65f9d1af27}
+      \strng{authornamehash}{62bb0157677dfcf032a9f6c242d79aa0}
+      \strng{authorfullhash}{b41db0a87cad0cdfbd1dba65f9d1af27}
+      \strng{authorfullhashraw}{b41db0a87cad0cdfbd1dba65f9d1af27}
+      \strng{editorbibnamehash}{52528c9c3276e4d5714103c73b451bf5}
+      \strng{editornamehash}{52528c9c3276e4d5714103c73b451bf5}
+      \strng{editorfullhash}{52528c9c3276e4d5714103c73b451bf5}
+      \strng{editorfullhashraw}{52528c9c3276e4d5714103c73b451bf5}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Montreal Cognitive Assessment (MoCA) is a cognitive screening instrument developed to detect mild cognitive impairment (MCI). It is a simple 10 minute paper and pencil test that assesses multiple cognitive domains including memory, language, executive functions, visuospatial skills, calculation, abstraction, attention, concentration, and orientation. Its validity has been established to detect mild cognitive impairment in patients with Alzheimer's disease and other pathologies in cognitively impaired subjects who scored in the normal range on the MMSE. MoCA's sensitivity and specificity to detect subjects with MCI due to Alzheimer's disease and distinguish them from healthy controls are excellent. MoCA is also sensitive to detect cognitive impairment in cerebrovascular disease and Parkinson's disease, Huntington's disease, brain tumors, systemic lupus erythematosus, substance use disorders, idiopathic rapid eye movement sleep behaviour disorder, obstructive sleep apnoea, risk of falling, rehabilitation outcome, and epilepsy. There are several features in MoCA's design that likely explain its superior sensitivity for detecting MCI. The MoCA's memory testing involves more words, fewer learning trials, and a longer delay before recall than the MMSE. Executive functions, higher-level language abilities, and complex visuospatial processing can also be mildly impaired in MCI participants of various etiologies and are assessed by the MoCA with more numerous and demanding tasks than the MMSE. MoCA was developed in a memory clinic setting and normed in a highly educated population. Norms in lesser educated, community based, multi-cultural samples will hopefully be available to help first line healthcare providers better assess subjects presenting with cognitive complaints. The MoCA is freely accessible for clinical and educational purposes (www.mocatest.org), and is available in 36 languages and dialects.}
+      \field{booktitle}{Cognitive Screening Instruments: A Practical Approach}
+      \field{isbn}{978-1-4471-2452-8}
+      \field{title}{Montreal Cognitive Assessment (MoCA): Concept and Clinical Review}
+      \field{year}{2013}
+      \field{pages}{111\bibrangedash 151}
+      \range{pages}{41}
+      \verb{doi}
+      \verb 10.1007/978-1-4471-2452-8_6
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-1-4471-2452-8_6
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-1-4471-2452-8_6
+      \endverb
+    \endentry
+    \entry{KARACA2022231}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=542e257c10c986529446d463087ec899}{%
+           family={Karaca},
+           familyi={K\bibinitperiod},
+           given={Yeliz},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ffd308caac800fd7500cb28d1a3cbc50}{%
+           family={Moonis},
+           familyi={M\bibinitperiod},
+           given={Majaz},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{5}{}{%
+        {{hash=542e257c10c986529446d463087ec899}{%
+           family={Karaca},
+           familyi={K\bibinitperiod},
+           given={Yeliz},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=01865480b15eb68259be794a6a3fbad8}{%
+           family={Baleanu},
+           familyi={B\bibinitperiod},
+           given={Dumitru},
+           giveni={D\bibinitperiod}}}%
+        {{hash=68f321547d2803d19c0497952e160c63}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yu-Dong},
+           giveni={Y\bibinithyphendelim D\bibinitperiod}}}%
+        {{hash=c0b2879a05b1d5990e854b776232493e}{%
+           family={Gervasi},
+           familyi={G\bibinitperiod},
+           given={Osvaldo},
+           giveni={O\bibinitperiod}}}%
+        {{hash=ffd308caac800fd7500cb28d1a3cbc50}{%
+           family={Moonis},
+           familyi={M\bibinitperiod},
+           given={Majaz},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{9fc61c1658c4e842a9031a6cc7b5002c}
+      \strng{fullhash}{9fc61c1658c4e842a9031a6cc7b5002c}
+      \strng{fullhashraw}{9fc61c1658c4e842a9031a6cc7b5002c}
+      \strng{bibnamehash}{9fc61c1658c4e842a9031a6cc7b5002c}
+      \strng{authorbibnamehash}{9fc61c1658c4e842a9031a6cc7b5002c}
+      \strng{authornamehash}{9fc61c1658c4e842a9031a6cc7b5002c}
+      \strng{authorfullhash}{9fc61c1658c4e842a9031a6cc7b5002c}
+      \strng{authorfullhashraw}{9fc61c1658c4e842a9031a6cc7b5002c}
+      \strng{editorbibnamehash}{0cd8ea0c5e307872bda68151737e1019}
+      \strng{editornamehash}{515ba8c5ac03cab75b15aa5b26f27f94}
+      \strng{editorfullhash}{0cd8ea0c5e307872bda68151737e1019}
+      \strng{editorfullhashraw}{0cd8ea0c5e307872bda68151737e1019}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Multi-Chaos, Fractal and Multi-Fractional Artificial Intelligence of Different Complex Systems}
+      \field{isbn}{978-0-323-90032-4}
+      \field{title}{Chapter 14 - Shannon entropy-based complexity quantification of nonlinear stochastic process: diagnostic and predictive spatiotemporal uncertainty of multiple sclerosis subgroups}
+      \field{year}{2022}
+      \field{pages}{231\bibrangedash 245}
+      \range{pages}{15}
+      \verb{doi}
+      \verb https://doi.org/10.1016/B978-0-323-90032-4.00018-3
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/B9780323900324000183
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/B9780323900324000183
+      \endverb
+    \endentry
+    \entry{Kim2023}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=45a7a4fa34d403be028021137e7b0cbb}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Se\bibnamedelima Young},
+           giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4048be9990f8e89a9bfdccda4d9dc93b}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Jinseok},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=66a5311b3904d9858ded1c8bad64f886}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Hojin},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2bc95ee38939d9c378d09899aebbf903}{%
+           family={Leoser},
+           familyi={L\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=359bb5bba6da0472acc3944d6713d6e0}{%
+           family={Ryu},
+           familyi={R\bibinitperiod},
+           given={Hokyoung},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90d20dadc377f13a4e3d93db8513877c}{%
+           family={Seo},
+           familyi={S\bibinitperiod},
+           given={Kyoungwon},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{773860029b53eff37b68299e252b58a6}
+      \strng{fullhash}{6aa77377f27346ffac58532cf3e55593}
+      \strng{fullhashraw}{6aa77377f27346ffac58532cf3e55593}
+      \strng{bibnamehash}{6aa77377f27346ffac58532cf3e55593}
+      \strng{authorbibnamehash}{6aa77377f27346ffac58532cf3e55593}
+      \strng{authornamehash}{773860029b53eff37b68299e252b58a6}
+      \strng{authorfullhash}{6aa77377f27346ffac58532cf3e55593}
+      \strng{authorfullhashraw}{6aa77377f27346ffac58532cf3e55593}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Medical Internet Research}
+      \field{number}{-}
+      \field{title}{Digital Marker for Early Screening of Mild Cognitive Impairment Through Hand and Eye Movement Analysis in Virtual Reality Using Machine Learning: First Validation Study}
+      \field{volume}{-}
+      \field{year}{2023}
+      \field{pages}{-}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb doi:10.2196/48093
+      \endverb
+      \warn{\item Range field 'pages' in entry 'Kim2023' is malformed, falling back to literal}
+    \endentry
+    \entry{Kober2022}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=cc65c68e6a4364e2eee2b5aec8a0b214}{%
+           family={Kober},
+           familyi={K\bibinitperiod},
+           given={Silvia\bibnamedelima Erika},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e93aae6c9175eddc5c425a5c34f7d83}{%
+           family={Settgast},
+           familyi={S\bibinitperiod},
+           given={Volker},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bfbb166a279a3f6fc07ed5fb48f6902b}{%
+           family={Brunnhofer},
+           familyi={B\bibinitperiod},
+           given={Marlies},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b72a37c56b2c849a9dceff9f857efd13}{%
+           family={Augsdörfer},
+           familyi={A\bibinitperiod},
+           given={Ursula\bibnamedelima H.},
+           giveni={U\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3a6b3d7af1e47fcb368ecbb4526588c}{%
+           family={Wood},
+           familyi={W\bibinitperiod},
+           given={Guilherme},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c9cdfe193c166891f1a96b76a6359d40}
+      \strng{fullhash}{591d80ceaeae83faa8f4566567ee02cf}
+      \strng{fullhashraw}{591d80ceaeae83faa8f4566567ee02cf}
+      \strng{bibnamehash}{591d80ceaeae83faa8f4566567ee02cf}
+      \strng{authorbibnamehash}{591d80ceaeae83faa8f4566567ee02cf}
+      \strng{authornamehash}{c9cdfe193c166891f1a96b76a6359d40}
+      \strng{authorfullhash}{591d80ceaeae83faa8f4566567ee02cf}
+      \strng{authorfullhashraw}{591d80ceaeae83faa8f4566567ee02cf}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Virtual Reality}
+      \field{number}{2}
+      \field{title}{Move your virtual body: differences and similarities in brain activation patterns during hand movements in real world and virtual reality}
+      \field{volume}{26}
+      \field{year}{2022}
+      \field{pages}{501\bibrangedash 511}
+      \range{pages}{11}
+      \verb{doi}
+      \verb https://doi.org/10.1007/s10055-021-00588-1
+      \endverb
+    \endentry
+    \entry{Lege2020}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=db495a375da31ae342e524d62c102c00}{%
+           family={Lege},
+           familyi={L\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bbea13cc35ee683f2cc304b4148f72a1}{%
+           family={Bonner},
+           familyi={B\bibinitperiod},
+           given={Euan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5a0dd217818dc91b041ae22cca0fd9d9}
+      \strng{fullhash}{5a0dd217818dc91b041ae22cca0fd9d9}
+      \strng{fullhashraw}{5a0dd217818dc91b041ae22cca0fd9d9}
+      \strng{bibnamehash}{5a0dd217818dc91b041ae22cca0fd9d9}
+      \strng{authorbibnamehash}{5a0dd217818dc91b041ae22cca0fd9d9}
+      \strng{authornamehash}{5a0dd217818dc91b041ae22cca0fd9d9}
+      \strng{authorfullhash}{5a0dd217818dc91b041ae22cca0fd9d9}
+      \strng{authorfullhashraw}{5a0dd217818dc91b041ae22cca0fd9d9}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The JALT CALL Journal}
+      \field{month}{12}
+      \field{number}{3}
+      \field{title}{Virtual reality in education: The promise, progress, and challenge}
+      \field{volume}{16}
+      \field{year}{2020}
+      \field{pages}{167\bibrangedash 180}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.29140/jaltcall.v16n3.388
+      \endverb
+      \verb{urlraw}
+      \verb https://www.castledown.com/journals/jaltcall/article/view/jaltcall.v16n3.388
+      \endverb
+      \verb{url}
+      \verb https://www.castledown.com/journals/jaltcall/article/view/jaltcall.v16n3.388
+      \endverb
+    \endentry
+    \entry{Liberti2014}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6c501b106a067f9390ed721e696a5ae9}{%
+           family={Liberti},
+           familyi={L\bibinitperiod},
+           given={Leo},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4de70cb78d0d58cf9eb1da1abdb373b}{%
+           family={Lavor},
+           familyi={L\bibinitperiod},
+           given={Carlile},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c0a25fdccf32d60a6a0b8fc18279433}{%
+           family={Maculan},
+           familyi={M\bibinitperiod},
+           given={Nelson},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f32dfe07560d2e9cbdeb3bf02e38a1e}{%
+           family={Mucherino},
+           familyi={M\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8631849c02fb6d91281f23faa4091356}
+      \strng{fullhash}{ef3cfc6eb812780735534e42a9eca495}
+      \strng{fullhashraw}{ef3cfc6eb812780735534e42a9eca495}
+      \strng{bibnamehash}{ef3cfc6eb812780735534e42a9eca495}
+      \strng{authorbibnamehash}{ef3cfc6eb812780735534e42a9eca495}
+      \strng{authornamehash}{8631849c02fb6d91281f23faa4091356}
+      \strng{authorfullhash}{ef3cfc6eb812780735534e42a9eca495}
+      \strng{authorfullhashraw}{ef3cfc6eb812780735534e42a9eca495}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SIAM Review}
+      \field{title}{Euclidean Distance Geometry and Applications}
+      \field{volume}{56}
+      \field{year}{2014}
+      \field{pages}{3\bibrangedash 69}
+      \range{pages}{67}
+      \verb{doi}
+      \verb https://doi.org/10.1137/120875909
+      \endverb
+    \endentry
+    \entry{McLachlan1999}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=de36d60ffaaea6ca58a16889994787da}{%
+           family={McLachlan},
+           familyi={M\bibinitperiod},
+           given={G.\bibnamedelimi J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{de36d60ffaaea6ca58a16889994787da}
+      \strng{fullhash}{de36d60ffaaea6ca58a16889994787da}
+      \strng{fullhashraw}{de36d60ffaaea6ca58a16889994787da}
+      \strng{bibnamehash}{de36d60ffaaea6ca58a16889994787da}
+      \strng{authorbibnamehash}{de36d60ffaaea6ca58a16889994787da}
+      \strng{authornamehash}{de36d60ffaaea6ca58a16889994787da}
+      \strng{authorfullhash}{de36d60ffaaea6ca58a16889994787da}
+      \strng{authorfullhashraw}{de36d60ffaaea6ca58a16889994787da}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Resonance}
+      \field{title}{Mahalanobis distance}
+      \field{volume}{4}
+      \field{year}{1999}
+      \field{pages}{20\bibrangedash 26}
+      \range{pages}{7}
+      \verb{doi}
+      \verb https://doi.org/10.1007/BF02834632
+      \endverb
+    \endentry
+    \entry{Moskiewicz2025}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=868f90327f59e1c37122a78817c84965}{%
+           family={Moskiewicz},
+           familyi={M\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ceaf2c25feded6fd724a6255e208eba6}{%
+           family={Sarzyńska-Długosz},
+           familyi={S\bibinithyphendelim D\bibinitperiod},
+           given={Iwona},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8d97e5863ef4ac2f3eb552fc03b3a700}
+      \strng{fullhash}{8d97e5863ef4ac2f3eb552fc03b3a700}
+      \strng{fullhashraw}{8d97e5863ef4ac2f3eb552fc03b3a700}
+      \strng{bibnamehash}{8d97e5863ef4ac2f3eb552fc03b3a700}
+      \strng{authorbibnamehash}{8d97e5863ef4ac2f3eb552fc03b3a700}
+      \strng{authornamehash}{8d97e5863ef4ac2f3eb552fc03b3a700}
+      \strng{authorfullhash}{8d97e5863ef4ac2f3eb552fc03b3a700}
+      \strng{authorfullhashraw}{8d97e5863ef4ac2f3eb552fc03b3a700}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Clinical Medicine}
+      \field{number}{22}
+      \field{title}{Modern Technologies Supporting Motor Rehabilitation After Stroke: A Narrative Review}
+      \field{volume}{14}
+      \field{year}{2025}
+      \field{pages}{8035}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.3390/jcm14228035
+      \endverb
+    \endentry
+    \entry{Park2025}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=910101318275914a9f141d4e255bf8c8}{%
+           family={Park},
+           familyi={P\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=1cd5da9a7d04628dfc2b997496e5f9d0}{%
+           family={Jin-Hyuck},
+           familyi={J\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{8773bebd3f7021f3596b2a289da92581}
+      \strng{fullhash}{8773bebd3f7021f3596b2a289da92581}
+      \strng{fullhashraw}{8773bebd3f7021f3596b2a289da92581}
+      \strng{bibnamehash}{8773bebd3f7021f3596b2a289da92581}
+      \strng{authorbibnamehash}{8773bebd3f7021f3596b2a289da92581}
+      \strng{authornamehash}{8773bebd3f7021f3596b2a289da92581}
+      \strng{authorfullhash}{8773bebd3f7021f3596b2a289da92581}
+      \strng{authorfullhashraw}{8773bebd3f7021f3596b2a289da92581}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of NeuroEngineering and Rehabilitation}
+      \field{number}{-}
+      \field{title}{Detection of mild cognitive impairment using a virtual reality-based stroop task: a cross-sectional study of embodied behavioral markers}
+      \field{volume}{-}
+      \field{year}{2025}
+      \field{pages}{-}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb https://doi.org/10.1186/s12984-025-01714-9
+      \endverb
+      \warn{\item Range field 'pages' in entry 'Park2025' is malformed, falling back to literal}
+    \endentry
+    \entry{Powell2017}{book}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=06e643d55df7f0ef6758d4fec8a2d082}{%
+           family={Powell},
+           familyi={P\bibinitperiod},
+           given={Wendy},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ffe36879e12991f5bff5e72481f6236b}{%
+           family={Garner},
+           familyi={G\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0185dc17d6fdc6ad81549bfb40b1374}{%
+           family={Shapiro},
+           familyi={S\bibinitperiod},
+           given={Seth},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d5e425245172018355ad472137e70816}{%
+           family={Paul},
+           familyi={P\bibinitperiod},
+           given={Bryce},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{2}{%
+        {British Academy of Film}%
+        {Television Arts}%
+      }
+      \strng{namehash}{5f8cdce50fabd99378b86ee351869780}
+      \strng{fullhash}{a0f328d297a2b4f01a3ce53f73ab6366}
+      \strng{fullhashraw}{a0f328d297a2b4f01a3ce53f73ab6366}
+      \strng{bibnamehash}{a0f328d297a2b4f01a3ce53f73ab6366}
+      \strng{authorbibnamehash}{a0f328d297a2b4f01a3ce53f73ab6366}
+      \strng{authornamehash}{5f8cdce50fabd99378b86ee351869780}
+      \strng{authorfullhash}{a0f328d297a2b4f01a3ce53f73ab6366}
+      \strng{authorfullhashraw}{a0f328d297a2b4f01a3ce53f73ab6366}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The British Academy of Film and Television Arts (BAFTA) is an independent charity that supports, develops and promotes the art forms of the moving image by identifying and rewarding excellence, inspiring practitioners and benefiting the public. Currently, BAFTA promotes and celebrates the very best creative work in film, television and games, but recently VR has become the hottest two letters in our industry, with daily announcements and proclamations. However, there remain considerable uncertainties around what impact VR will have on the creative world. In early 2017, BAFTA set up a VR advisory group, made up of industry experts and thought leaders from across the UK and the US, to explore the challenges and opportunities offered by VR, and to consider the role of VR in the context of the entertainment industry. Across the next few months, the VR Advisory Group discussed and debated questions such as the role of VR in entertainment, delivering and recognising excellence in VR content, and the challenges and opportunities unique to VR. This paper draws on the insights from the VR Advisory Group research and discussions across the past few months, as well as several interviews with executives from across the industry. We endeavour to provide some preliminary answers to some of our burning questions, and to offer some insight into the process of leveraging VR techniques and technology to produce new forms of storytelling experience.}
+      \field{title}{Virtual Reality In Entertainment: The State Of The Industry}
+      \field{year}{2017}
+    \endentry
+    \entry{AlcanizRaya2020}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=9ddf0d43aa8262f38d79a612942a5046}{%
+           family={Raya},
+           familyi={R\bibinitperiod},
+           given={Mariano\bibnamedelima Alcaniz},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=35a2ae816476832938e56e815e21b5fa}{%
+           family={Marin-Morales},
+           familyi={M\bibinithyphendelim M\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c98c245d0a881cdade15707ef249972e}{%
+           family={Minissi},
+           familyi={M\bibinitperiod},
+           given={Maria\bibnamedelima Eleonora},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5dca01136b5760a46737f196a2b55693}{%
+           family={Garcia},
+           familyi={G\bibinitperiod},
+           given={Gonzalo\bibnamedelima Teruel},
+           giveni={G\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cbd343c173a9b3e94d44695734c5933e}{%
+           family={Abad},
+           familyi={A\bibinitperiod},
+           given={Luis},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4e44835d352f6040c216ce1a6b12da93}{%
+           family={Giglioli},
+           familyi={G\bibinitperiod},
+           given={Irene\bibnamedelimb Alice\bibnamedelima Chicchi},
+           giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1b01a5cc610eecac1a29d70431ac8d64}
+      \strng{fullhash}{f0e684f69b2862732ee5c7f8a9ed466d}
+      \strng{fullhashraw}{f0e684f69b2862732ee5c7f8a9ed466d}
+      \strng{bibnamehash}{f0e684f69b2862732ee5c7f8a9ed466d}
+      \strng{authorbibnamehash}{f0e684f69b2862732ee5c7f8a9ed466d}
+      \strng{authornamehash}{1b01a5cc610eecac1a29d70431ac8d64}
+      \strng{authorfullhash}{f0e684f69b2862732ee5c7f8a9ed466d}
+      \strng{authorfullhashraw}{f0e684f69b2862732ee5c7f8a9ed466d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Clin. Med.}
+      \field{number}{-}
+      \field{title}{Machine Learning and Virtual Reality on Body Movements’ Behaviors to Classify Children with Autism Spectrum Disorder}
+      \field{volume}{-}
+      \field{year}{2020}
+      \field{pages}{-}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb https://doi.org/10.3390/jcm9051260
+      \endverb
+      \warn{\item Range field 'pages' in entry 'AlcanizRaya2020' is malformed, falling back to literal}
+    \endentry
+    \entry{Saeed2025}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=cde302f03da83c2d03c623dd867d50d5}{%
+           family={Saeed},
+           familyi={S\bibinitperiod},
+           given={Zakra},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cee160eaf970b4896e9d4142aa5da53e}{%
+           family={Kabir},
+           familyi={K\bibinitperiod},
+           given={Anum},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6cda965af23a8848b256eb82c7a7beda}{%
+           family={Ratan},
+           familyi={R\bibinitperiod},
+           given={Priyanka},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de8c4e55f3fa418e067afb392fea4526}{%
+           family={Hamza},
+           familyi={H\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0bda44009e0a9be235cbc0b3d638584f}{%
+           family={Soomro},
+           familyi={S\bibinitperiod},
+           given={Muhammad\bibnamedelima Hasnain},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=881b564003cf813715e008a550c65ffb}{%
+           family={Saba},
+           familyi={S\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=b6159942776d279430646a195cbf4516}{%
+           family={Dastgeer},
+           familyi={D\bibinitperiod},
+           given={Ghulam},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8221bb11ca50f9a05ccc5f985be580bd}
+      \strng{fullhash}{cbdc4e180ca9beae924f008ac1fb2a3a}
+      \strng{fullhashraw}{cbdc4e180ca9beae924f008ac1fb2a3a}
+      \strng{bibnamehash}{cbdc4e180ca9beae924f008ac1fb2a3a}
+      \strng{authorbibnamehash}{cbdc4e180ca9beae924f008ac1fb2a3a}
+      \strng{authornamehash}{8221bb11ca50f9a05ccc5f985be580bd}
+      \strng{authorfullhash}{cbdc4e180ca9beae924f008ac1fb2a3a}
+      \strng{authorfullhashraw}{cbdc4e180ca9beae924f008ac1fb2a3a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Insights Journal of Health and Rehabilitation}
+      \field{note}{online publication / open access}
+      \field{title}{Effectiveness of Virtual Reality-Based Rehabilitation Versus Traditional Physical Therapy in Improving Mobility and Reducing Pain Among Children With Lower Limb Disability}
+      \field{year}{2025}
+      \verb{doi}
+      \verb https://doi.org/10.71000/ijhr181
+      \endverb
+    \endentry
+    \entry{Samadbeik2018}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=b1e83d3511a35afa1a32fb7fb9a9bf2f}{%
+           family={Samadbeik},
+           familyi={S\bibinitperiod},
+           given={Mahnaz},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=da69f37542c433e96d0099bd63c3bf6d}{%
+           family={Yaaghobi},
+           familyi={Y\bibinitperiod},
+           given={Donya},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d8bf9c5ca8928b91fe1ff57fc2b6eb83}{%
+           family={Bastani},
+           familyi={B\bibinitperiod},
+           given={Peivand},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=221b63cb31ccf4830316900129c5fead}{%
+           family={Abhari},
+           familyi={A\bibinitperiod},
+           given={Shahabeddin},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=042df954b392878975294c3500e6cf31}{%
+           family={Rezaee},
+           familyi={R\bibinitperiod},
+           given={Rita},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3d17bd36c11d6a649249f42a5ef852b}{%
+           family={Garavand},
+           familyi={G\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1f1ec9c5a393a4504a980a7bd65fb91e}
+      \strng{fullhash}{2cea06effadd65a129846cd1b7ff950d}
+      \strng{fullhashraw}{2cea06effadd65a129846cd1b7ff950d}
+      \strng{bibnamehash}{2cea06effadd65a129846cd1b7ff950d}
+      \strng{authorbibnamehash}{2cea06effadd65a129846cd1b7ff950d}
+      \strng{authornamehash}{1f1ec9c5a393a4504a980a7bd65fb91e}
+      \strng{authorfullhash}{2cea06effadd65a129846cd1b7ff950d}
+      \strng{authorfullhashraw}{2cea06effadd65a129846cd1b7ff950d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of advances in medical education \& professionalism}
+      \field{title}{The Applications of Virtual Reality Technology in Medical Groups Teaching}
+      \field{volume}{6}
+      \field{year}{2018}
+      \field{pages}{123\bibrangedash 129}
+      \range{pages}{7}
+      \verb{doi}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC6039818/
+      \endverb
+    \endentry
+    \entry{Szekely1999}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=bed8f87a0290312bbb40341c3022c4f6}{%
+           family={Székely},
+           familyi={S\bibinitperiod},
+           given={Gábor},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f4c577da8fd05d71f640e7badbb01f6d}{%
+           family={Satava},
+           familyi={S\bibinitperiod},
+           given={Richard\bibnamedelima M},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e6619350fe3c2c368aa4375c2338ee6a}
+      \strng{fullhash}{e6619350fe3c2c368aa4375c2338ee6a}
+      \strng{fullhashraw}{e6619350fe3c2c368aa4375c2338ee6a}
+      \strng{bibnamehash}{e6619350fe3c2c368aa4375c2338ee6a}
+      \strng{authorbibnamehash}{e6619350fe3c2c368aa4375c2338ee6a}
+      \strng{authornamehash}{e6619350fe3c2c368aa4375c2338ee6a}
+      \strng{authorfullhash}{e6619350fe3c2c368aa4375c2338ee6a}
+      \strng{authorfullhashraw}{e6619350fe3c2c368aa4375c2338ee6a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMJ (Clinical research ed.)}
+      \field{title}{Virtual reality in medicine}
+      \field{volume}{319}
+      \field{year}{1999}
+      \field{pages}{1305}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1136/bmj.319.7220.1305
+      \endverb
+    \endentry
+    \entry{Tokarskaya2026}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=90d838686320d91d6c59223ab3355702}{%
+           family={Tokarskaya},
+           familyi={T\bibinitperiod},
+           given={Ludmila},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2662bfcd3a06995611c0e0d6564c8731}{%
+           family={Roman},
+           familyi={R\bibinitperiod},
+           given={Ushakov},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8ce08e416c326f84725945c3796bca2d}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Nazyar\bibnamedelima Khamenehei},
+           giveni={N\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0,
+           prefix={et},
+           prefixi={e\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{219572b8bfd7ee4a3f821997a93b5ac3}
+      \strng{fullhash}{42be67d97c4cc2e93e5268c09e5f94e3}
+      \strng{fullhashraw}{42be67d97c4cc2e93e5268c09e5f94e3}
+      \strng{bibnamehash}{42be67d97c4cc2e93e5268c09e5f94e3}
+      \strng{authorbibnamehash}{42be67d97c4cc2e93e5268c09e5f94e3}
+      \strng{authornamehash}{219572b8bfd7ee4a3f821997a93b5ac3}
+      \strng{authorfullhash}{42be67d97c4cc2e93e5268c09e5f94e3}
+      \strng{authorfullhashraw}{42be67d97c4cc2e93e5268c09e5f94e3}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Research Square}
+      \field{number}{-}
+      \field{title}{The Potential of Virtual Reality for Diagnosing Cognitive Functions in Adolescents with Autism: Empirical Study}
+      \field{volume}{-}
+      \field{year}{2026}
+      \field{pages}{-}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb https://doi.org/10.21203/rs.3.rs-8611749/v1
+      \endverb
+      \warn{\item Range field 'pages' in entry 'Tokarskaya2026' is malformed, falling back to literal}
+    \endentry
+    \entry{Vlasiu2024}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=1cf7b574eae1a337ebb7904b2e3a77dd}{%
+           family={Vlasiu},
+           familyi={V\bibinitperiod},
+           given={Alexandru\bibnamedelima Robert},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d12213277f99c764373201c88bb9dba0}{%
+           family={Frincu},
+           familyi={F\bibinitperiod},
+           given={Marc\bibnamedelima Eduard},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=74a49632024cddb6ee2ad020962cbec2}{%
+           family={Daniel},
+           familyi={D\bibinitperiod},
+           given={Chioibas},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=72d3c805bbf961ae64ae7434c280971e}{%
+           family={Mocan},
+           familyi={M\bibinitperiod},
+           given={Darius},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2a5cb8006f9804a4f0f8cac0e36003ac}{%
+           family={Gabor},
+           familyi={G\bibinitperiod},
+           given={Marin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ff1dad5c18ceb53f4b3e40f0abfbb86d}
+      \strng{fullhash}{b59bf46f84b2d3976e87d9bb6c5f5b33}
+      \strng{fullhashraw}{b59bf46f84b2d3976e87d9bb6c5f5b33}
+      \strng{bibnamehash}{b59bf46f84b2d3976e87d9bb6c5f5b33}
+      \strng{authorbibnamehash}{b59bf46f84b2d3976e87d9bb6c5f5b33}
+      \strng{authornamehash}{ff1dad5c18ceb53f4b3e40f0abfbb86d}
+      \strng{authorfullhash}{b59bf46f84b2d3976e87d9bb6c5f5b33}
+      \strng{authorfullhashraw}{b59bf46f84b2d3976e87d9bb6c5f5b33}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2024 E-Health and Bioengineering Conference (EHB)}
+      \field{title}{Classifying Mental Disabilities from Virtual Reality Behavioral Data using Machine Learning}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/EHB64556.2024.10805654
+      \endverb
+      \keyw{Support vector machines;Radio frequency;Solid modeling;Accuracy;Mental disorders;Virtual reality;Vectors;Classification algorithms;Decision trees;Random forests;virtual-reality;mental-disorders;autism-spectrum-disorder;movement-gaze-analysis;machine-learning}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

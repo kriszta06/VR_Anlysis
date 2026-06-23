@@ -1,0 +1,28 @@
+\babel@toc {romanian}{}\relax 
+\contentsline {chapter}{\numberline {1}Introducere}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Obiectivele urmărite}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Descrierea soluției}{7}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Relevanța rezultatelor}{7}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Structura lucrării}{8}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Prezentarea problematicii abordate}{12}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Descrierea problemei}{12}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Abordări existente}{12}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Analiza aborării propuse}{13}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Contribuția autorului}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Model propus}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Proiectare și implementare}{16}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Colectarea de Date}{16}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Preprocesare}{17}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Ingineria Datelor}{18}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Prelucrarea Datelor}{18}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Vizualizare}{20}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Validare}{22}{subsection.3.2.6}%
+\contentsline {chapter}{\numberline {4}Rezultate obținute}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Clusterizare ierarhică aglomerativă și grupare comportamentală nesupravegheată}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Profile de bază ale participanților}{24}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Analiză calitativă}{25}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Rezumat al evaluării subiecților}{27}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Analiză comparativă a traiectoriilor între scenarii}{28}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Indicele cantitativ de atipicitate și generare automată de raportare}{29}{subsection.4.3.3}%
+\contentsline {chapter}{\numberline {5}Concluzii și direcții viitoare}{31}{chapter.5}%
+\contentsline {chapter}{Bibliografie}{31}{chapter.5}%

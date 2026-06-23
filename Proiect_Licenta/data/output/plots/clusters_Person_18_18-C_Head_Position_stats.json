@@ -1,0 +1,40 @@
+{
+  "scenario": "Person_18_18-C",
+  "combo": "Head_Position",
+  "total_points": 320,
+  "clusters": [
+    {
+      "label": 0,
+      "color": "red",
+      "center": {
+        "x": 26.864224137931025,
+        "y": -3.3552586206896544,
+        "z": 2.6232758620689656
+      },
+      "size": 116,
+      "percentage": 36.25
+    },
+    {
+      "label": 1,
+      "color": "blue",
+      "center": {
+        "x": 1.6592857142857145,
+        "y": 3.5629285714285714,
+        "z": 0.4884999999999999
+      },
+      "size": 140,
+      "percentage": 43.75
+    },
+    {
+      "label": 2,
+      "color": "green",
+      "center": {
+        "x": 16.436406250000005,
+        "y": -1.03859375,
+        "z": 2.04046875
+      },
+      "size": 64,
+      "percentage": 20.0
+    }
+  ]
+}

@@ -1,0 +1,2046 @@
+
+# STEP 1: DATA LOADER 
+
+(venv) D:\Docs\Licenta\Proiect_Licenta\core\processing>python data_loader.py
+DEBUG: Starting data loading tests...
+DEBUG: Test file path: D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-A.json
+DEBUG: File exists: True
+DEBUG: Calling load_head_data...
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-A.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 291 total records, 268 valid records, useful duration: 266.99 seconds.
+DEBUG load_head_data: Returning filtered data
+DEBUG: load_head_data completed.
+Final loaded data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-A.json:
+Positions shape: (268, 3)
+Rotations shape: (268, 3)
+Forward vectors shape: (268, 3)
+Timestamps shape: (268,)
+First timestamp: 11.71 seconds, Last timestamp: 278.70 seconds
+DEBUG: Data loading tests completed.
+
+
+# STEP 2: FEATURE EXTRACTOR
+
+(venv) D:\Docs\Licenta\Proiect_Licenta>python -m core.processing.feature_extractor
+DEBUG : Running feature extractor script
+DEBUG: test file name: D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-A.json
+
+DEBUG: Loading test scenario from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-A.json...
+DEBUG: File exists: True
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-A.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 291 total records, 268 valid records, useful duration: 266.99 seconds.
+DEBUG load_head_data: Returning filtered data
+
+=== DEBUG SCENARIO: Scenario 1-A.json ===
+Scenario data shape: (268, 10)
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (268, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (268, 3), sample: [[0.16 1.17 0.26]
+ [0.27 1.2  0.37]
+ [0.22 1.23 0.28]]
+DEBUG: Rotations shape: (268, 3), sample: [[ 28.39 265.54   0.14]
+ [ 14.12 343.24   3.64]
+ [  4.31 274.7    2.17]]
+DEBUG: Forwards shape: (268, 3), sample: [[-0.88 -0.48 -0.07]
+ [-0.28 -0.24  0.93]
+ [-0.99 -0.08  0.08]]
+DEBUG: Timestamps shape: (268,), sample: [11.710594 12.70269  13.70107 ]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [0.27291  1.167388 0.047836], Std position: [0.080454 0.037044 0.111629], Total distance: 18.264788306636746
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 40.657724 182.14459  157.805075], Std rotation: [ 65.566424  82.40552  174.436854]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.006119 -0.422948 -0.273993], Std forward: [0.635101 0.222494 0.541502]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 266.9916763305664, Mean delta time: 0.9999688252081139
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.06840744684133612, Std speed: 0.05131427967970295, Max speed: 0.27313000567495327
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.04014080763712976, Std acceleration: 0.05566162744670956
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.8804587584720808
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.06840957949573992
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [357.14 352.68 359.91], Std rotation dynamic: [ 65.566424  82.40552  174.436854]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 221
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.7501270994475356, Speed autocorrelation: 0.4092379391819303
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 0.17233687939614087, Path efficiency: 0.009435470945673104
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [0.006473 0.001372 0.012461]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 214
+DEBUG: Total features extracted: 42
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Docs\Licenta\Proiect_Licenta\core\processing\feature_extractor.py", line 290, in <module>
+    run_debug_scenario("Scenario 1-A.json", positions, rotations, forwards, timestamps)
+  File "D:\Docs\Licenta\Proiect_Licenta\core\processing\feature_extractor.py", line 199, in run_debug_scenario
+    if len(feature_names) != len(features):
+           ^^^^^^^^^^^^^
+NameError: name 'feature_names' is not defined
+
+(venv) D:\Docs\Licenta\Proiect_Licenta>python -m core.processing.feature_extractor
+DEBUG : Running feature extractor script
+DEBUG: test file name: D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-A.json
+
+DEBUG: Loading test scenario from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-A.json...
+DEBUG: File exists: True
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-A.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 291 total records, 268 valid records, useful duration: 266.99 seconds.
+DEBUG load_head_data: Returning filtered data
+
+=== DEBUG SCENARIO: Scenario 1-A.json ===
+Scenario data shape: (268, 10)
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (268, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (268, 3), sample: [[0.16 1.17 0.26]
+ [0.27 1.2  0.37]
+ [0.22 1.23 0.28]]
+DEBUG: Rotations shape: (268, 3), sample: [[ 28.39 265.54   0.14]
+ [ 14.12 343.24   3.64]
+ [  4.31 274.7    2.17]]
+DEBUG: Forwards shape: (268, 3), sample: [[-0.88 -0.48 -0.07]
+ [-0.28 -0.24  0.93]
+ [-0.99 -0.08  0.08]]
+DEBUG: Timestamps shape: (268,), sample: [11.710594 12.70269  13.70107 ]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [0.27291  1.167388 0.047836], Std position: [0.080454 0.037044 0.111629], Total distance: 18.264788306636746
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 40.657724 182.14459  157.805075], Std rotation: [ 65.566424  82.40552  174.436854]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.006119 -0.422948 -0.273993], Std forward: [0.635101 0.222494 0.541502]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 266.9916763305664, Mean delta time: 0.9999688252081139
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.06840744684133612, Std speed: 0.05131427967970295, Max speed: 0.27313000567495327
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.04014080763712976, Std acceleration: 0.05566162744670956
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.8804587584720808
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.06840957949573992
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [357.14 352.68 359.91], Std rotation dynamic: [ 65.566424  82.40552  174.436854]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 221
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.7501270994475356, Speed autocorrelation: 0.4092379391819303
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 0.17233687939614087, Path efficiency: 0.009435470945673104
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [0.006473 0.001372 0.012461]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 214
+DEBUG: Total features extracted: 42
+Extracted 42 features:
+ 1. mean_pos_x: 0.2729
+ 2. mean_pos_y: 1.1674
+ 3. mean_pos_z: 0.0478
+ 4. std_pos_x: 0.0805
+ 5. std_pos_y: 0.0370
+ 6. std_pos_z: 0.1116
+ 7. total_distance: 18.2648
+ 8. mean_pitch: 40.6577
+ 9. mean_yaw: 182.1446
+10. mean_roll: 157.8051
+11. std_pitch: 65.5664
+12. std_yaw: 82.4055
+13. std_roll: 174.4369
+14. mean_forward_x: 0.0061
+15. mean_forward_y: -0.4229
+16. mean_forward_z: -0.2740
+17. std_forward_x: 0.6351
+18. std_forward_y: 0.2225
+19. std_forward_z: 0.5415
+20. total_time: 266.9917
+21. mean_delta_time: 1.0000
+22. mean_speed: 0.0684
+23. std_speed: 0.0513
+24. max_speed: 0.2731
+25. mean_acceleration: 0.0401
+26. std_acceleration: 0.0557
+27. movement_entropy: 0.8805
+28. avg_speed_time: 0.0684
+29. ptp_pitch: 357.1400
+30. ptp_yaw: 352.6800
+31. ptp_roll: 359.9100
+32. std_pitch_dynamic: 65.5664
+33. std_yaw_dynamic: 82.4055
+34. std_roll_dynamic: 174.4369
+35. sharp_turns: 221.0000
+36. speed_cv: 0.7501
+37. speed_autocorr: 0.4092
+38. path_efficiency: 0.0094
+39. var_pos_x: 0.0065
+40. var_pos_y: 0.0014
+41. var_pos_z: 0.0125
+42. unique_movement_directions: 214.0000
+
+
+# STEP 3: plot_clusters
+
+(in plots) 
+(raw data, only head position + k-mean 3 clusters)
+cluster_Person_11_11-A_Head_Position
+cluster_Person_11_11-B_Head_Position
+cluster_Person_11_11-C_Head_Position
+
+# STEP 4: plot_person_scenario_comparison
+
+    #STEP 5: needs group_files_by_person from file_management
+    DEBUG : Running file management script + feature combination script
+    Total test files: 9
+    - 1-A.json
+    - 1-B.json
+    - 1-C.json
+    - 2-A.json
+    - 2-B.json
+    - 2-C.json
+    - 3-A.json
+    - 3-B.json
+    - 3-C.json
+    DEBUG: Grouped files by person: {'Person_1': [WindowsPath('data/vr_recordings/1-A.json'), WindowsPath('data/vr_recordings/1-B.json'), WindowsPath('data/vr_recordings/1-C.json')], 'Person_2': [WindowsPath('data/vr_recordings/2-A.json'), WindowsPath('data/vr_recordings/2-B.json'), WindowsPath('data/vr_recordings/2-C.json')], 'Person_3': [WindowsPath('data/vr_recordings/3-A.json'), WindowsPath('data/vr_recordings/3-B.json'), WindowsPath('data/vr_recordings/3-C.json')]}
+    DEBUG: Person_1 has 3 files: ['1-A.json', '1-B.json', '1-C.json']
+    DEBUG: Person_2 has 3 files: ['2-A.json', '2-B.json', '2-C.json']
+    DEBUG: Person_3 has 3 files: ['3-A.json', '3-B.json', '3-C.json']
+
+Person_1_scenarios_comparison
+Person_10_scenarios_comparison
+Person_11_scenarios_comparison
+
+# STEP 5: plot_all_scenarios_comparison
+
+comparison_A_scenarios_3d
+comparison_B_scenarios_3d
+comparison_C_scenarios_3d
+
+# STEP 6: CLUSTERING - perform_agglomerative_clustering
+
+(venv) D:\Docs\Licenta\Proiect_Licenta>python -m core.analysis.clustering
+DEBUG: Running clustering on first 3 VR JSON files
+DEBUG: Grouped files by person: {'Person_1': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/1-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/1-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/1-C.json')], 'Person_10': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/10-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/10-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/10-C.json')], 'Person_11': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/11-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/11-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/11-C.json')], 'Person_12': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/12-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/12-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/12-C.json')], 'Person_13': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/13-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/13-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/13-C.json')], 'Person_14': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/14-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/14-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/14-C.json')], 'Person_15': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/15-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/15-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/15-C.json')], 'Person_16': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/16-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/16-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/16-C.json')], 'Person_17': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/17-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/17-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/17-C.json')], 'Person_18': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/18-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/18-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/18-C.json')], 'Person_19': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/19-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/19-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/19-C.json')], 'Person_2': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/2-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/2-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/2-C.json')], 'Person_3': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/3-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/3-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/3-C.json')], 'Person_4': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/4-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/4-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/4-C.json')], 'Person_5': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/5-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/5-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/5-C.json')], 'Person_6': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/6-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/6-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/6-C.json')], 'Person_7': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/7-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/7-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/7-C.json')], 'Person_8': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/8-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/8-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/8-C.json')], 'Person_9': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/9-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/9-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/9-C.json')]}
+DEBUG: Person_1 has 3 files: ['1-A.json', '1-B.json', '1-C.json']
+DEBUG: Person_10 has 3 files: ['10-A.json', '10-B.json', '10-C.json']
+DEBUG: Person_11 has 3 files: ['11-A.json', '11-B.json', '11-C.json']
+DEBUG: Person_12 has 3 files: ['12-A.json', '12-B.json', '12-C.json']
+DEBUG: Person_13 has 3 files: ['13-A.json', '13-B.json', '13-C.json']
+DEBUG: Person_14 has 3 files: ['14-A.json', '14-B.json', '14-C.json']
+DEBUG: Person_15 has 3 files: ['15-A.json', '15-B.json', '15-C.json']
+DEBUG: Person_16 has 3 files: ['16-A.json', '16-B.json', '16-C.json']
+DEBUG: Person_17 has 3 files: ['17-A.json', '17-B.json', '17-C.json']
+DEBUG: Person_18 has 3 files: ['18-A.json', '18-B.json', '18-C.json']
+DEBUG: Person_19 has 3 files: ['19-A.json', '19-B.json', '19-C.json']
+DEBUG: Person_2 has 3 files: ['2-A.json', '2-B.json', '2-C.json']
+DEBUG: Person_3 has 3 files: ['3-A.json', '3-B.json', '3-C.json']
+DEBUG: Person_4 has 3 files: ['4-A.json', '4-B.json', '4-C.json']
+DEBUG: Person_5 has 3 files: ['5-A.json', '5-B.json', '5-C.json']
+DEBUG: Person_6 has 3 files: ['6-A.json', '6-B.json', '6-C.json']
+DEBUG: Person_7 has 3 files: ['7-A.json', '7-B.json', '7-C.json']
+DEBUG: Person_8 has 3 files: ['8-A.json', '8-B.json', '8-C.json']
+DEBUG: Person_9 has 3 files: ['9-A.json', '9-B.json', '9-C.json']
+Total JSON files: 57
+Total persons: 19
+Selected persons: ['Person_1', 'Person_10', 'Person_11']
+
+Processing Person_1
+Total scenarios for person Person_1: 3
+
+ Scenario 1/3: 1-A.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-A.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 291 total records, 268 valid records, useful duration: 266.99 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 268, positions: (268, 3), rotations: (268, 3), forward_vectors: (268, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (268, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (268, 3), sample: [[0.16 0.26 1.17]
+ [0.27 0.37 1.2 ]
+ [0.22 0.28 1.23]]
+DEBUG: Rotations shape: (268, 3), sample: [[ 28.39   0.14 265.54]
+ [ 14.12   3.64 343.24]
+ [  4.31   2.17 274.7 ]]
+DEBUG: Forwards shape: (268, 3), sample: [[-0.88 -0.07 -0.48]
+ [-0.28  0.93 -0.24]
+ [-0.99  0.08 -0.08]]
+DEBUG: Timestamps shape: (268,), sample: [11.710594 12.70269  13.70107 ]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [0.27291  0.047836 1.167388], Std position: [0.080454 0.111629 0.037044], Total distance: 18.264788306636746
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 40.657724 157.805075 182.14459 ], Std rotation: [ 65.566424 174.436854  82.40552 ]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.006119 -0.273993 -0.422948], Std forward: [0.635101 0.541502 0.222494]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 266.9916763305664, Mean delta time: 0.9999688252081139
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.06840744684133612, Std speed: 0.05131427967970295, Max speed: 0.27313000567495327
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.04014080763712976, Std acceleration: 0.05566162744670956
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.8804587584720808
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.06840957949573992
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [357.14 359.91 352.68], Std rotation dynamic: [ 65.566424 174.436854  82.40552 ]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 221
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.7501270994475356, Speed autocorrelation: 0.4092379391819303
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 0.17233687939614087, Path efficiency: 0.009435470945673104
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [0.006473 0.012461 0.001372]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 214
+DEBUG: Total features extracted: 42
+Features extracted:
+[  0.27291    0.047836   1.167388   0.080454   0.111629   0.037044
+  18.264788  40.657724 157.805075 182.14459   65.566424 174.436854
+  82.40552    0.006119  -0.273993  -0.422948   0.635101   0.541502
+   0.222494 266.991676   0.999969   0.068407   0.051314   0.27313
+   0.040141   0.055662   0.880459   0.06841  357.14     359.91
+ 352.68      65.566424 174.436854  82.40552  221.         0.750127
+   0.409238   0.009435   0.006473   0.012461   0.001372 214.      ]
+Feature vector length: 42
+
+ Scenario 2/3: 1-B.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-B.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 313 total records, 289 valid records, useful duration: 288.01 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 289, positions: (289, 3), rotations: (289, 3), forward_vectors: (289, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (289, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (289, 3), sample: [[0.02 0.64 1.15]
+ [0.05 0.62 1.15]
+ [0.01 0.64 1.15]]
+DEBUG: Rotations shape: (289, 3), sample: [[ 43.1  355.03 211.59]
+ [ 42.8  357.74 206.47]
+ [ 43.94 352.98 208.64]]
+DEBUG: Forwards shape: (289, 3), sample: [[-0.38 -0.62 -0.68]
+ [-0.33 -0.66 -0.68]
+ [-0.35 -0.63 -0.69]]
+DEBUG: Timestamps shape: (289,), sample: [11.870751 12.868055 13.875012]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [9.466851 7.38263  2.294637], Std position: [11.382384 14.295222  1.880534], Total distance: 486.5435969623412
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 43.731315 147.58     208.997716], Std rotation: [ 95.706994 174.412284 106.818325]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [-0.042111  0.104775 -0.210484], Std forward: [0.73302  0.604753 0.200654]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 288.0064458847046, Mean delta time: 1.0000223815441132
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 1.6893874894525736, Std speed: 1.009666532922307, Max speed: 3.046621079162946
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.42357458519558555, Std acceleration: 0.734830422285934
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 1.0886143059814524
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 1.6893496791982061
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [359.73 359.99 359.58], Std rotation dynamic: [ 95.706994 174.412284 106.818325]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 101
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.5976524268268837, Speed autocorrelation: 0.7345191126002174
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 42.58664227196128, Path efficiency: 0.0875289337643005
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [129.558661 204.353365   3.536407]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 258
+DEBUG: Total features extracted: 42
+Features extracted:
+[  9.466851   7.38263    2.294637  11.382384  14.295222   1.880534
+ 486.543597  43.731315 147.58     208.997716  95.706994 174.412284
+ 106.818325  -0.042111   0.104775  -0.210484   0.73302    0.604753
+   0.200654 288.006446   1.000022   1.689387   1.009667   3.046621
+   0.423575   0.73483    1.088614   1.68935  359.73     359.99
+ 359.58      95.706994 174.412284 106.818325 101.         0.597652
+   0.734519   0.087529 129.558661 204.353365   3.536407 258.      ]
+Feature vector length: 42
+
+ Scenario 3/3: 1-C.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-C.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 316 total records, 296 valid records, useful duration: 295.02 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 296, positions: (296, 3), rotations: (296, 3), forward_vectors: (296, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (296, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (296, 3), sample: [[0.18 0.28 0.76]
+ [0.15 0.23 0.81]
+ [0.05 0.18 0.75]]
+DEBUG: Rotations shape: (296, 3), sample: [[  8.78   2.93   2.69]
+ [348.18   5.5  341.9 ]
+ [ 18.87   1.53 277.43]]
+DEBUG: Forwards shape: (296, 3), sample: [[ 0.05  0.99 -0.15]
+ [-0.3   0.93  0.2 ]
+ [-0.94  0.12 -0.32]]
+DEBUG: Timestamps shape: (296,), sample: [11.78192  12.785199 13.787554]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [-1.372061  8.173412  0.552669], Std position: [0.673562 3.453237 0.242643], Total distance: 30.55528261942152
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 39.553176 102.665912 161.788074], Std rotation: [ 77.626022 158.981337 104.073326]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.175777 -0.018818 -0.298345], Std forward: [0.567455 0.719714 0.199144]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 295.0180673599243, Mean delta time: 1.000061245287879
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.10357722921837803, Std speed: 0.14367888499784248, Max speed: 0.98254770876533
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.07967876717292494, Std acceleration: 0.14678190679608277
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.3803238326589746
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.10357088598964971
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [359.18 359.98 358.04], Std rotation dynamic: [ 77.626022 158.981337 104.073326]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 232
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 1.3871667168747654, Speed autocorrelation: 0.4794481440127568
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 10.62621757729438, Path efficiency: 0.3477702271534597
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [ 0.453685 11.924845  0.058876]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 233
+DEBUG: Total features extracted: 42
+Features extracted:
+[ -1.372061   8.173412   0.552669   0.673562   3.453237   0.242643
+  30.555283  39.553176 102.665912 161.788074  77.626022 158.981337
+ 104.073326   0.175777  -0.018818  -0.298345   0.567455   0.719714
+   0.199144 295.018067   1.000061   0.103577   0.143679   0.982548
+   0.079679   0.146782   0.380324   0.103571 359.18     359.98
+ 358.04      77.626022 158.981337 104.073326 232.         1.387167
+   0.479448   0.34777    0.453685  11.924845   0.058876 233.      ]
+Feature vector length: 42
+Person: Person_1
+ Total scenarios: 3
+ Valid scenarios: 3
+ Corruption rate: 0.00
+MIN_SCENARIOS_REQUIRED: 2
+MAX_CORRUPTION_RATE: 0.5
+Person_1 is selected for analysis
+[  2.789234   5.201293   1.338231   4.045467   5.953362   0.720074
+ 178.454556  41.314071 136.016996 184.310127  79.633147 169.276825
+  97.765724   0.046595  -0.062678  -0.310592   0.645192   0.62199
+   0.207431 283.33873    1.000017   0.620457   0.401553   1.4341
+   0.181131   0.312425   0.783132   0.620443 358.683333 359.96
+ 356.766667  79.633147 169.276825  97.765724 184.666667   0.911649
+   0.541068   0.148245  43.339606  72.09689    1.198885 235.      ]
+
+Processing Person_10
+Total scenarios for person Person_10: 3
+
+ Scenario 1/3: 10-A.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\10-A.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 243 total records, 220 valid records, useful duration: 219.00 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 220, positions: (220, 3), rotations: (220, 3), forward_vectors: (220, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (220, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (220, 3), sample: [[-0.53 -0.29  1.31]
+ [-0.54 -0.27  1.34]
+ [-0.52 -0.27  1.36]]
+DEBUG: Rotations shape: (220, 3), sample: [[ 23.47   1.28 200.33]
+ [  8.69   4.49 214.92]
+ [  9.17   1.78 212.75]]
+DEBUG: Forwards shape: (220, 3), sample: [[-0.32 -0.86 -0.4 ]
+ [-0.57 -0.81 -0.15]
+ [-0.53 -0.83 -0.16]]
+DEBUG: Timestamps shape: (220,), sample: [11.790778 12.790665 13.781573]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [-0.223682 -0.303364  1.361591], Std position: [0.182728 0.075188 0.014885], Total distance: 10.295430980483298
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 50.598227 175.075591 186.114818], Std rotation: [111.177617 177.896907 114.931718]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.053364  0.072364 -0.138682], Std forward: [0.586259 0.780066 0.145773]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 218.99503421783447, Mean delta time: 0.9999773251955912
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.047011100367503646, Std speed: 0.03881230215280822, Max speed: 0.2027313493271329
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.028136230810457862, Std acceleration: 0.040547991846332176
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.7432294153459543
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.04701216635918067
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [359.38 359.77 358.84], Std rotation dynamic: [111.177617 177.896907 114.931718]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 186
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.8255986745555346, Speed autocorrelation: 0.4566945305705195
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 0.3522782990761708, Path efficiency: 0.03421695504966941
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [0.03339  0.005653 0.000222]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 147
+DEBUG: Total features extracted: 42
+Features extracted:
+[ -0.223682  -0.303364   1.361591   0.182728   0.075188   0.014885
+  10.295431  50.598227 175.075591 186.114818 111.177617 177.896907
+ 114.931718   0.053364   0.072364  -0.138682   0.586259   0.780066
+   0.145773 218.995034   0.999977   0.047011   0.038812   0.202731
+   0.028136   0.040548   0.743229   0.047012 359.38     359.77
+ 358.84     111.177617 177.896907 114.931718 186.         0.825599
+   0.456695   0.034217   0.03339    0.005653   0.000222 147.      ]
+Feature vector length: 42
+
+ Scenario 2/3: 10-B.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\10-B.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 258 total records, 238 valid records, useful duration: 236.00 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 238, positions: (238, 3), rotations: (238, 3), forward_vectors: (238, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (238, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (238, 3), sample: [[-0.9  -0.19  1.25]
+ [-0.9  -0.19  1.25]
+ [-0.83 -0.4   1.36]]
+DEBUG: Rotations shape: (238, 3), sample: [[ 45.49  18.7    8.44]
+ [ 45.49  18.7    8.44]
+ [ 30.97   4.07 358.71]]
+DEBUG: Forwards shape: (238, 3), sample: [[ 0.1   0.69 -0.71]
+ [ 0.1   0.69 -0.71]
+ [-0.02  0.86 -0.51]]
+DEBUG: Timestamps shape: (238,), sample: [11.099946 11.099999 12.089681]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [ 4.746218 12.848361  3.356008], Std position: [ 9.868468 16.011942  1.677155], Total distance: 219.91944922216632
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 11.862395 291.215462 183.402017], Std rotation: [ 13.612985 135.867725 122.810211]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.020798  0.214874 -0.192647], Std forward: [0.606308 0.71714  0.181967]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 236.00004482269287, Mean delta time: 0.995780779842586
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.9279301654943727, Std speed: 0.9594091208291399, Max speed: 2.7278013124126184
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.43746249585671454, Std acceleration: 0.6993059716881319
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.7769148993839635
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.9318618959898591
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [ 79.45 359.87 359.6 ], Std rotation dynamic: [ 13.612985 135.867725 122.810211]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 121
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 1.0339238409368836, Speed autocorrelation: 0.7348149369946334
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 34.12572197038474, Path efficiency: 0.15517373334229462
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [ 97.386657 256.382298   2.812848]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 179
+DEBUG: Total features extracted: 42
+Features extracted:
+[  4.746218  12.848361   3.356008   9.868468  16.011942   1.677155
+ 219.919449  11.862395 291.215462 183.402017  13.612985 135.867725
+ 122.810211   0.020798   0.214874  -0.192647   0.606308   0.71714
+   0.181967 236.000045   0.995781   0.92793    0.959409   2.727801
+   0.437462   0.699306   0.776915   0.931862  79.45     359.87
+ 359.6       13.612985 135.867725 122.810211 121.         1.033924
+   0.734815   0.155174  97.386657 256.382298   2.812848 179.      ]
+Feature vector length: 42
+
+ Scenario 3/3: 10-C.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\10-C.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 207 total records, 184 valid records, useful duration: 182.99 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 184, positions: (184, 3), rotations: (184, 3), forward_vectors: (184, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (184, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (184, 3), sample: [[0.04 0.66 0.46]
+ [0.58 0.39 0.47]
+ [0.79 0.62 0.42]]
+DEBUG: Rotations shape: (184, 3), sample: [[ 26.73   6.68 274.04]
+ [ 22.83   0.82 312.18]
+ [ 41.24   0.55 304.32]]
+DEBUG: Forwards shape: (184, 3), sample: [[-0.89  0.06 -0.45]
+ [-0.68  0.62 -0.39]
+ [-0.62  0.42 -0.66]]
+DEBUG: Timestamps shape: (184,), sample: [11.74 12.74 13.74]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [0.353533 3.898261 0.502609], Std position: [1.02352  3.394474 0.075078], Total distance: 32.86583141374027
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 10.987826 188.529783 169.808641], Std rotation: [  5.348141 176.117103 117.832515]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.102772  0.202609 -0.189511], Std forward: [0.660266 0.684986 0.087055]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 182.98973655700684, Mean delta time: 0.9999439156120592
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.17959470717890857, Std speed: 0.2262919270219097, Max speed: 0.9680392554023831
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.1594267568216542, Std acceleration: 0.24105117665928832
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.5116921814964959
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.1796047802030775
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [ 39.11 359.97 358.23], Std rotation dynamic: [  5.348141 176.117103 117.832515]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 107
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 1.260014454638033, Speed autocorrelation: 0.4296416828448264
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 4.2682549127248715, Path efficiency: 0.1298690685469906
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [ 1.047592 11.522456  0.005637]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 134
+DEBUG: Total features extracted: 42
+Features extracted:
+[  0.353533   3.898261   0.502609   1.02352    3.394474   0.075078
+  32.865831  10.987826 188.529783 169.808641   5.348141 176.117103
+ 117.832515   0.102772   0.202609  -0.189511   0.660266   0.684986
+   0.087055 182.989737   0.999944   0.179595   0.226292   0.968039
+   0.159427   0.241051   0.511692   0.179605  39.11     359.97
+ 358.23       5.348141 176.117103 117.832515 107.         1.260014
+   0.429642   0.129869   1.047592  11.522456   0.005637 134.      ]
+Feature vector length: 42
+Person: Person_10
+ Total scenarios: 3
+ Valid scenarios: 3
+ Corruption rate: 0.00
+MIN_SCENARIOS_REQUIRED: 2
+MAX_CORRUPTION_RATE: 0.5
+Person_10 is selected for analysis
+[  1.625356   5.481086   1.740069   3.691572   6.493868   0.589039
+  87.693571  24.482816 218.273612 179.775159  43.379581 163.293912
+ 118.524815   0.058978   0.163282  -0.173613   0.617611   0.727398
+   0.138265 212.661605   0.998567   0.384845   0.408171   1.299524
+   0.208342   0.326968   0.677279   0.38616  159.313333 359.87
+ 358.89      43.379581 163.293912 118.524815 138.         1.039846
+   0.540384   0.10642   32.822546  89.303469   0.939569 153.333333]
+
+Processing Person_11
+Total scenarios for person Person_11: 3
+
+ Scenario 1/3: 11-A.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\11-A.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 325 total records, 305 valid records, useful duration: 304.00 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 305, positions: (305, 3), rotations: (305, 3), forward_vectors: (305, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (305, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (305, 3), sample: [[0.29 0.44 1.45]
+ [0.27 0.39 1.45]
+ [0.27 0.29 1.45]]
+DEBUG: Rotations shape: (305, 3), sample: [[ 11.89 356.38 324.46]
+ [ 11.92 354.72 294.01]
+ [ 11.64 355.28 242.  ]]
+DEBUG: Forwards shape: (305, 3), sample: [[-0.57  0.8  -0.21]
+ [-0.89  0.4  -0.21]
+ [-0.86 -0.46 -0.2 ]]
+DEBUG: Timestamps shape: (305,), sample: [12.78     13.770728 14.761439]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [0.331082 0.415574 1.442131], Std position: [0.054579 0.056351 0.029215], Total distance: 12.379955550466244
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 35.980164 342.079967 230.070984], Std rotation: [ 80.955066  65.996473 137.703641]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [-0.169115  0.62259  -0.246295], Std forward: [0.502065 0.479352 0.202901]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 303.9999990463257, Mean delta time: 0.9999999968629134
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.04072353799495475, Std speed: 0.031619885157666255, Max speed: 0.17233687939614084
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.028447166768570696, Std acceleration: 0.038374593627889524
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.9584662015687019
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.040723538122708014
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [359.53 359.63 359.57], Std rotation dynamic: [ 80.955066  65.996473 137.703641]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 227
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.7764523102482808, Speed autocorrelation: 0.26536530804604436
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 0.08062257748298553, Path efficiency: 0.006512347896107687
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [0.002979 0.003175 0.000853]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 184
+DEBUG: Total features extracted: 42
+Features extracted:
+[  0.331082   0.415574   1.442131   0.054579   0.056351   0.029215
+  12.379956  35.980164 342.079967 230.070984  80.955066  65.996473
+ 137.703641  -0.169115   0.62259   -0.246295   0.502065   0.479352
+   0.202901 303.999999   1.         0.040724   0.03162    0.172337
+   0.028447   0.038375   0.958466   0.040724 359.53     359.63
+ 359.57      80.955066  65.996473 137.703641 227.         0.776452
+   0.265365   0.006512   0.002979   0.003175   0.000853 184.      ]
+Feature vector length: 42
+
+ Scenario 2/3: 11-B.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\11-B.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 347 total records, 324 valid records, useful duration: 323.00 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 324, positions: (324, 3), rotations: (324, 3), forward_vectors: (324, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (324, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (324, 3), sample: [[-0.02 -0.22  1.44]
+ [-0.01 -0.22  1.43]
+ [-0.02 -0.22  1.43]]
+DEBUG: Rotations shape: (324, 3), sample: [[ 17.27 356.56   6.17]
+ [ 21.71 357.18  25.28]
+ [ 23.92 355.17   5.6 ]]
+DEBUG: Forwards shape: (324, 3), sample: [[ 0.1   0.95 -0.3 ]
+ [ 0.4   0.84 -0.37]
+ [ 0.09  0.91 -0.41]]
+DEBUG: Timestamps shape: (324,), sample: [11.158588 12.16     13.16    ]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [9.049414 9.00142  2.357994], Std position: [11.425482 14.950947  1.91889 ], Total distance: 627.9212909434737
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 14.119969 354.022284 179.234568], Std rotation: [  6.003566  19.716334 113.482904]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.071265  0.100401 -0.242191], Std forward: [0.710684 0.641955 0.095587]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 323.00141525268555, Mean delta time: 1.0000043815872617
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 1.9440287645308783, Std speed: 0.8124174614795004, Max speed: 2.7645795340340635
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.42263688692068035, Std acceleration: 0.6973846848668287
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 1.2493242633675192
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 1.9440202466365288
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [ 41.75 359.08 359.95], Std rotation dynamic: [  6.003566  19.716334 113.482904]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 134
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.4179040332644195, Speed autocorrelation: 0.6261864140496897
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 26.906932192280856, Path efficiency: 0.04285080404241788
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [130.541642 223.530815   3.682141]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 285
+DEBUG: Total features extracted: 42
+Features extracted:
+[  9.049414   9.00142    2.357994  11.425482  14.950947   1.91889
+ 627.921291  14.119969 354.022284 179.234568   6.003566  19.716334
+ 113.482904   0.071265   0.100401  -0.242191   0.710684   0.641955
+   0.095587 323.001415   1.000004   1.944029   0.812417   2.76458
+   0.422637   0.697385   1.249324   1.94402   41.75     359.08
+ 359.95       6.003566  19.716334 113.482904 134.         0.417904
+   0.626186   0.042851 130.541642 223.530815   3.682141 285.      ]
+Feature vector length: 42
+
+ Scenario 3/3: 11-C.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\11-C.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 310 total records, 290 valid records, useful duration: 289.00 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 290, positions: (290, 3), rotations: (290, 3), forward_vectors: (290, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (290, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (290, 3), sample: [[ 2.23 -1.31  0.51]
+ [ 2.07 -1.23  0.5 ]
+ [ 2.   -1.02  0.5 ]]
+DEBUG: Rotations shape: (290, 3), sample: [[ 20.14 352.04  90.14]
+ [ 24.41 355.62  45.45]
+ [ 24.43 354.32   4.76]]
+DEBUG: Forwards shape: (290, 3), sample: [[ 0.94  0.   -0.34]
+ [ 0.65  0.64 -0.41]
+ [ 0.08  0.91 -0.41]]
+DEBUG: Timestamps shape: (290,), sample: [11.02     12.019512 13.02    ]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [13.695621  0.178207  1.276034], Std position: [10.749009  4.920155  1.529518], Total distance: 136.77118683619614
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 26.841172 352.425862 179.561966], Std rotation: [ 44.081276  20.195997 104.248964]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.019724  0.056379 -0.350138], Std forward: [0.735634 0.567694 0.100526]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 288.9999895095825, Mean delta time: 0.9999999637009775
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.47325670185534996, Std speed: 0.2652675036152296, Max speed: 0.9546727187890097
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.213250884609352, Std acceleration: 0.29335890161088146
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 1.1133884789719073
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.4732567190341062
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [354.13 346.48 358.65], Std rotation dynamic: [ 44.081276  20.195997 104.248964]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 105
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.5605150493913303, Speed autocorrelation: 0.388496420832913
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 7.01081307695477, Path efficiency: 0.05125942999493938
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [115.54119   24.207927   2.339427]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 246
+DEBUG: Total features extracted: 42
+Features extracted:
+[ 13.695621   0.178207   1.276034  10.749009   4.920155   1.529518
+ 136.771187  26.841172 352.425862 179.561966  44.081276  20.195997
+ 104.248964   0.019724   0.056379  -0.350138   0.735634   0.567694
+   0.100526 288.99999    1.         0.473257   0.265268   0.954673
+   0.213251   0.293359   1.113388   0.473257 354.13     346.48
+ 358.65      44.081276  20.195997 104.248964 105.         0.560515
+   0.388496   0.051259 115.54119   24.207927   2.339427 246.      ]
+Feature vector length: 42
+Person: Person_11
+ Total scenarios: 3
+ Valid scenarios: 3
+ Corruption rate: 0.00
+MIN_SCENARIOS_REQUIRED: 2
+MAX_CORRUPTION_RATE: 0.5
+Person_11 is selected for analysis
+[  7.692039   3.1984     1.692053   7.40969    6.642485   1.159208
+ 259.024144  25.647102 349.509371 196.289172  43.679969  35.302934
+ 118.478503  -0.026042   0.25979   -0.279541   0.649461   0.563001
+   0.133005 305.333801   1.000001   0.819336   0.369768   1.297196
+   0.221445   0.343039   1.10706    0.819334 251.803333 355.063333
+ 359.39      43.679969  35.302934 118.478503 155.333333   0.584957
+   0.426683   0.033541  82.028604  82.580639   2.007474 238.333333]
+
+Clustering 3 persons with feature matrix shape: (3, 42)
+Performing clustering for scenario 'First_3_Persons' with 3 samples
+Features combination: Aggregated_Behavior_Features
+Total number of points: 3
+
+Clustering results for scenario 'First_3_Persons':
+Number of grous created: 3
+ Group 0: 1 points (33.33%)
+ Group 1: 1 points (33.33%)
+ Group 2: 1 points (33.33%)
+
+Clustering results:
+ Person: Person_1, Cluster: 2
+ Person: Person_10, Cluster: 1
+ Person: Person_11, Cluster: 0
+
+
+# STEP 7: DISABILITY ENGINE  - analyze_person_disability
+
+(venv) D:\Docs\Licenta\Proiect_Licenta>python -m core.analysis.disability_engine
+DEBUG: Running disability_engine workflow for first 3 persons
+DEBUG: Grouped files by person: {'Person_1': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/1-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/1-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/1-C.json')], 'Person_10': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/10-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/10-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/10-C.json')], 'Person_11': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/11-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/11-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/11-C.json')], 'Person_12': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/12-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/12-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/12-C.json')], 'Person_13': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/13-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/13-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/13-C.json')], 'Person_14': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/14-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/14-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/14-C.json')], 'Person_15': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/15-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/15-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/15-C.json')], 'Person_16': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/16-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/16-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/16-C.json')], 'Person_17': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/17-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/17-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/17-C.json')], 'Person_18': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/18-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/18-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/18-C.json')], 'Person_19': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/19-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/19-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/19-C.json')], 'Person_2': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/2-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/2-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/2-C.json')], 'Person_3': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/3-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/3-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/3-C.json')], 'Person_4': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/4-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/4-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/4-C.json')], 'Person_5': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/5-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/5-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/5-C.json')], 'Person_6': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/6-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/6-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/6-C.json')], 'Person_7': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/7-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/7-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/7-C.json')], 'Person_8': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/8-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/8-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/8-C.json')], 'Person_9': [WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/9-A.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/9-B.json'), WindowsPath('D:/Docs/Licenta/Proiect_Licenta/data/vr_recordings/9-C.json')]}
+DEBUG: Person_1 has 3 files: ['1-A.json', '1-B.json', '1-C.json']
+DEBUG: Person_10 has 3 files: ['10-A.json', '10-B.json', '10-C.json']
+DEBUG: Person_11 has 3 files: ['11-A.json', '11-B.json', '11-C.json']
+DEBUG: Person_12 has 3 files: ['12-A.json', '12-B.json', '12-C.json']
+DEBUG: Person_13 has 3 files: ['13-A.json', '13-B.json', '13-C.json']
+DEBUG: Person_14 has 3 files: ['14-A.json', '14-B.json', '14-C.json']
+DEBUG: Person_15 has 3 files: ['15-A.json', '15-B.json', '15-C.json']
+DEBUG: Person_16 has 3 files: ['16-A.json', '16-B.json', '16-C.json']
+DEBUG: Person_17 has 3 files: ['17-A.json', '17-B.json', '17-C.json']
+DEBUG: Person_18 has 3 files: ['18-A.json', '18-B.json', '18-C.json']
+DEBUG: Person_19 has 3 files: ['19-A.json', '19-B.json', '19-C.json']
+DEBUG: Person_2 has 3 files: ['2-A.json', '2-B.json', '2-C.json']
+DEBUG: Person_3 has 3 files: ['3-A.json', '3-B.json', '3-C.json']
+DEBUG: Person_4 has 3 files: ['4-A.json', '4-B.json', '4-C.json']
+DEBUG: Person_5 has 3 files: ['5-A.json', '5-B.json', '5-C.json']
+DEBUG: Person_6 has 3 files: ['6-A.json', '6-B.json', '6-C.json']
+DEBUG: Person_7 has 3 files: ['7-A.json', '7-B.json', '7-C.json']
+DEBUG: Person_8 has 3 files: ['8-A.json', '8-B.json', '8-C.json']
+DEBUG: Person_9 has 3 files: ['9-A.json', '9-B.json', '9-C.json']
+Total JSON files: 57
+Total persons: 19
+Selected persons: ['Person_1', 'Person_10', 'Person_11']
+
+Processing Person_1
+Total scenarios for person Person_1: 3
+
+ Scenario 1/3: 1-A.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-A.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 291 total records, 268 valid records, useful duration: 266.99 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 268, positions: (268, 3), rotations: (268, 3), forward_vectors: (268, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (268, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (268, 3), sample: [[0.16 0.26 1.17]
+ [0.27 0.37 1.2 ]
+ [0.22 0.28 1.23]]
+DEBUG: Rotations shape: (268, 3), sample: [[ 28.39   0.14 265.54]
+ [ 14.12   3.64 343.24]
+ [  4.31   2.17 274.7 ]]
+DEBUG: Forwards shape: (268, 3), sample: [[-0.88 -0.07 -0.48]
+ [-0.28  0.93 -0.24]
+ [-0.99  0.08 -0.08]]
+DEBUG: Timestamps shape: (268,), sample: [11.710594 12.70269  13.70107 ]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [0.27291  0.047836 1.167388], Std position: [0.080454 0.111629 0.037044], Total distance: 18.264788306636746
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 40.657724 157.805075 182.14459 ], Std rotation: [ 65.566424 174.436854  82.40552 ]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.006119 -0.273993 -0.422948], Std forward: [0.635101 0.541502 0.222494]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 266.9916763305664, Mean delta time: 0.9999688252081139
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.06840744684133612, Std speed: 0.05131427967970295, Max speed: 0.27313000567495327
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.04014080763712976, Std acceleration: 0.05566162744670956
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.8804587584720808
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.06840957949573992
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [357.14 359.91 352.68], Std rotation dynamic: [ 65.566424 174.436854  82.40552 ]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 221
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.7501270994475356, Speed autocorrelation: 0.4092379391819303
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 0.17233687939614087, Path efficiency: 0.009435470945673104
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [0.006473 0.012461 0.001372]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 214
+DEBUG: Total features extracted: 42
+Features extracted:
+[  0.27291    0.047836   1.167388   0.080454   0.111629   0.037044
+  18.264788  40.657724 157.805075 182.14459   65.566424 174.436854
+  82.40552    0.006119  -0.273993  -0.422948   0.635101   0.541502
+   0.222494 266.991676   0.999969   0.068407   0.051314   0.27313
+   0.040141   0.055662   0.880459   0.06841  357.14     359.91
+ 352.68      65.566424 174.436854  82.40552  221.         0.750127
+   0.409238   0.009435   0.006473   0.012461   0.001372 214.      ]
+Feature vector length: 42
+
+ Scenario 2/3: 1-B.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-B.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 313 total records, 289 valid records, useful duration: 288.01 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 289, positions: (289, 3), rotations: (289, 3), forward_vectors: (289, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (289, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (289, 3), sample: [[0.02 0.64 1.15]
+ [0.05 0.62 1.15]
+ [0.01 0.64 1.15]]
+DEBUG: Rotations shape: (289, 3), sample: [[ 43.1  355.03 211.59]
+ [ 42.8  357.74 206.47]
+ [ 43.94 352.98 208.64]]
+DEBUG: Forwards shape: (289, 3), sample: [[-0.38 -0.62 -0.68]
+ [-0.33 -0.66 -0.68]
+ [-0.35 -0.63 -0.69]]
+DEBUG: Timestamps shape: (289,), sample: [11.870751 12.868055 13.875012]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [9.466851 7.38263  2.294637], Std position: [11.382384 14.295222  1.880534], Total distance: 486.5435969623412
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 43.731315 147.58     208.997716], Std rotation: [ 95.706994 174.412284 106.818325]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [-0.042111  0.104775 -0.210484], Std forward: [0.73302  0.604753 0.200654]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 288.0064458847046, Mean delta time: 1.0000223815441132
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 1.6893874894525736, Std speed: 1.009666532922307, Max speed: 3.046621079162946
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.42357458519558555, Std acceleration: 0.734830422285934
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 1.0886143059814524
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 1.6893496791982061
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [359.73 359.99 359.58], Std rotation dynamic: [ 95.706994 174.412284 106.818325]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 101
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.5976524268268837, Speed autocorrelation: 0.7345191126002174
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 42.58664227196128, Path efficiency: 0.0875289337643005
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [129.558661 204.353365   3.536407]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 258
+DEBUG: Total features extracted: 42
+Features extracted:
+[  9.466851   7.38263    2.294637  11.382384  14.295222   1.880534
+ 486.543597  43.731315 147.58     208.997716  95.706994 174.412284
+ 106.818325  -0.042111   0.104775  -0.210484   0.73302    0.604753
+   0.200654 288.006446   1.000022   1.689387   1.009667   3.046621
+   0.423575   0.73483    1.088614   1.68935  359.73     359.99
+ 359.58      95.706994 174.412284 106.818325 101.         0.597652
+   0.734519   0.087529 129.558661 204.353365   3.536407 258.      ]
+Feature vector length: 42
+
+ Scenario 3/3: 1-C.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\1-C.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 316 total records, 296 valid records, useful duration: 295.02 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 296, positions: (296, 3), rotations: (296, 3), forward_vectors: (296, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (296, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (296, 3), sample: [[0.18 0.28 0.76]
+ [0.15 0.23 0.81]
+ [0.05 0.18 0.75]]
+DEBUG: Rotations shape: (296, 3), sample: [[  8.78   2.93   2.69]
+ [348.18   5.5  341.9 ]
+ [ 18.87   1.53 277.43]]
+DEBUG: Forwards shape: (296, 3), sample: [[ 0.05  0.99 -0.15]
+ [-0.3   0.93  0.2 ]
+ [-0.94  0.12 -0.32]]
+DEBUG: Timestamps shape: (296,), sample: [11.78192  12.785199 13.787554]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [-1.372061  8.173412  0.552669], Std position: [0.673562 3.453237 0.242643], Total distance: 30.55528261942152
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 39.553176 102.665912 161.788074], Std rotation: [ 77.626022 158.981337 104.073326]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.175777 -0.018818 -0.298345], Std forward: [0.567455 0.719714 0.199144]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 295.0180673599243, Mean delta time: 1.000061245287879
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.10357722921837803, Std speed: 0.14367888499784248, Max speed: 0.98254770876533
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.07967876717292494, Std acceleration: 0.14678190679608277
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.3803238326589746
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.10357088598964971
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [359.18 359.98 358.04], Std rotation dynamic: [ 77.626022 158.981337 104.073326]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 232
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 1.3871667168747654, Speed autocorrelation: 0.4794481440127568
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 10.62621757729438, Path efficiency: 0.3477702271534597
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [ 0.453685 11.924845  0.058876]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 233
+DEBUG: Total features extracted: 42
+Features extracted:
+[ -1.372061   8.173412   0.552669   0.673562   3.453237   0.242643
+  30.555283  39.553176 102.665912 161.788074  77.626022 158.981337
+ 104.073326   0.175777  -0.018818  -0.298345   0.567455   0.719714
+   0.199144 295.018067   1.000061   0.103577   0.143679   0.982548
+   0.079679   0.146782   0.380324   0.103571 359.18     359.98
+ 358.04      77.626022 158.981337 104.073326 232.         1.387167
+   0.479448   0.34777    0.453685  11.924845   0.058876 233.      ]
+Feature vector length: 42
+Person: Person_1
+ Total scenarios: 3
+ Valid scenarios: 3
+ Corruption rate: 0.00
+MIN_SCENARIOS_REQUIRED: 2
+MAX_CORRUPTION_RATE: 0.5
+Person_1 is selected for analysis
+Aggregated features for person:
+[  2.789234   5.201293   1.338231   4.045467   5.953362   0.720074
+ 178.454556  41.314071 136.016996 184.310127  79.633147 169.276825
+  97.765724   0.046595  -0.062678  -0.310592   0.645192   0.62199
+   0.207431 283.33873    1.000017   0.620457   0.401553   1.4341
+   0.181131   0.312425   0.783132   0.620443 358.683333 359.96
+ 356.766667  79.633147 169.276825  97.765724 184.666667   0.911649
+   0.541068   0.148245  43.339606  72.09689    1.198885 235.      ]
+
+Processing Person_10
+Total scenarios for person Person_10: 3
+
+ Scenario 1/3: 10-A.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\10-A.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 243 total records, 220 valid records, useful duration: 219.00 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 220, positions: (220, 3), rotations: (220, 3), forward_vectors: (220, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (220, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (220, 3), sample: [[-0.53 -0.29  1.31]
+ [-0.54 -0.27  1.34]
+ [-0.52 -0.27  1.36]]
+DEBUG: Rotations shape: (220, 3), sample: [[ 23.47   1.28 200.33]
+ [  8.69   4.49 214.92]
+ [  9.17   1.78 212.75]]
+DEBUG: Forwards shape: (220, 3), sample: [[-0.32 -0.86 -0.4 ]
+ [-0.57 -0.81 -0.15]
+ [-0.53 -0.83 -0.16]]
+DEBUG: Timestamps shape: (220,), sample: [11.790778 12.790665 13.781573]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [-0.223682 -0.303364  1.361591], Std position: [0.182728 0.075188 0.014885], Total distance: 10.295430980483298
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 50.598227 175.075591 186.114818], Std rotation: [111.177617 177.896907 114.931718]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.053364  0.072364 -0.138682], Std forward: [0.586259 0.780066 0.145773]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 218.99503421783447, Mean delta time: 0.9999773251955912
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.047011100367503646, Std speed: 0.03881230215280822, Max speed: 0.2027313493271329
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.028136230810457862, Std acceleration: 0.040547991846332176
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.7432294153459543
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.04701216635918067
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [359.38 359.77 358.84], Std rotation dynamic: [111.177617 177.896907 114.931718]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 186
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.8255986745555346, Speed autocorrelation: 0.4566945305705195
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 0.3522782990761708, Path efficiency: 0.03421695504966941
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [0.03339  0.005653 0.000222]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 147
+DEBUG: Total features extracted: 42
+Features extracted:
+[ -0.223682  -0.303364   1.361591   0.182728   0.075188   0.014885
+  10.295431  50.598227 175.075591 186.114818 111.177617 177.896907
+ 114.931718   0.053364   0.072364  -0.138682   0.586259   0.780066
+   0.145773 218.995034   0.999977   0.047011   0.038812   0.202731
+   0.028136   0.040548   0.743229   0.047012 359.38     359.77
+ 358.84     111.177617 177.896907 114.931718 186.         0.825599
+   0.456695   0.034217   0.03339    0.005653   0.000222 147.      ]
+Feature vector length: 42
+
+ Scenario 2/3: 10-B.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\10-B.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 258 total records, 238 valid records, useful duration: 236.00 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 238, positions: (238, 3), rotations: (238, 3), forward_vectors: (238, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (238, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (238, 3), sample: [[-0.9  -0.19  1.25]
+ [-0.9  -0.19  1.25]
+ [-0.83 -0.4   1.36]]
+DEBUG: Rotations shape: (238, 3), sample: [[ 45.49  18.7    8.44]
+ [ 45.49  18.7    8.44]
+ [ 30.97   4.07 358.71]]
+DEBUG: Forwards shape: (238, 3), sample: [[ 0.1   0.69 -0.71]
+ [ 0.1   0.69 -0.71]
+ [-0.02  0.86 -0.51]]
+DEBUG: Timestamps shape: (238,), sample: [11.099946 11.099999 12.089681]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [ 4.746218 12.848361  3.356008], Std position: [ 9.868468 16.011942  1.677155], Total distance: 219.91944922216632
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 11.862395 291.215462 183.402017], Std rotation: [ 13.612985 135.867725 122.810211]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.020798  0.214874 -0.192647], Std forward: [0.606308 0.71714  0.181967]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 236.00004482269287, Mean delta time: 0.995780779842586
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.9279301654943727, Std speed: 0.9594091208291399, Max speed: 2.7278013124126184
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.43746249585671454, Std acceleration: 0.6993059716881319
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.7769148993839635
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.9318618959898591
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [ 79.45 359.87 359.6 ], Std rotation dynamic: [ 13.612985 135.867725 122.810211]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 121
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 1.0339238409368836, Speed autocorrelation: 0.7348149369946334
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 34.12572197038474, Path efficiency: 0.15517373334229462
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [ 97.386657 256.382298   2.812848]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 179
+DEBUG: Total features extracted: 42
+Features extracted:
+[  4.746218  12.848361   3.356008   9.868468  16.011942   1.677155
+ 219.919449  11.862395 291.215462 183.402017  13.612985 135.867725
+ 122.810211   0.020798   0.214874  -0.192647   0.606308   0.71714
+   0.181967 236.000045   0.995781   0.92793    0.959409   2.727801
+   0.437462   0.699306   0.776915   0.931862  79.45     359.87
+ 359.6       13.612985 135.867725 122.810211 121.         1.033924
+   0.734815   0.155174  97.386657 256.382298   2.812848 179.      ]
+Feature vector length: 42
+
+ Scenario 3/3: 10-C.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\10-C.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 207 total records, 184 valid records, useful duration: 182.99 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 184, positions: (184, 3), rotations: (184, 3), forward_vectors: (184, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (184, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (184, 3), sample: [[0.04 0.66 0.46]
+ [0.58 0.39 0.47]
+ [0.79 0.62 0.42]]
+DEBUG: Rotations shape: (184, 3), sample: [[ 26.73   6.68 274.04]
+ [ 22.83   0.82 312.18]
+ [ 41.24   0.55 304.32]]
+DEBUG: Forwards shape: (184, 3), sample: [[-0.89  0.06 -0.45]
+ [-0.68  0.62 -0.39]
+ [-0.62  0.42 -0.66]]
+DEBUG: Timestamps shape: (184,), sample: [11.74 12.74 13.74]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [0.353533 3.898261 0.502609], Std position: [1.02352  3.394474 0.075078], Total distance: 32.86583141374027
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 10.987826 188.529783 169.808641], Std rotation: [  5.348141 176.117103 117.832515]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.102772  0.202609 -0.189511], Std forward: [0.660266 0.684986 0.087055]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 182.98973655700684, Mean delta time: 0.9999439156120592
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.17959470717890857, Std speed: 0.2262919270219097, Max speed: 0.9680392554023831
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.1594267568216542, Std acceleration: 0.24105117665928832
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.5116921814964959
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.1796047802030775
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [ 39.11 359.97 358.23], Std rotation dynamic: [  5.348141 176.117103 117.832515]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 107
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 1.260014454638033, Speed autocorrelation: 0.4296416828448264
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 4.2682549127248715, Path efficiency: 0.1298690685469906
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [ 1.047592 11.522456  0.005637]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 134
+DEBUG: Total features extracted: 42
+Features extracted:
+[  0.353533   3.898261   0.502609   1.02352    3.394474   0.075078
+  32.865831  10.987826 188.529783 169.808641   5.348141 176.117103
+ 117.832515   0.102772   0.202609  -0.189511   0.660266   0.684986
+   0.087055 182.989737   0.999944   0.179595   0.226292   0.968039
+   0.159427   0.241051   0.511692   0.179605  39.11     359.97
+ 358.23       5.348141 176.117103 117.832515 107.         1.260014
+   0.429642   0.129869   1.047592  11.522456   0.005637 134.      ]
+Feature vector length: 42
+Person: Person_10
+ Total scenarios: 3
+ Valid scenarios: 3
+ Corruption rate: 0.00
+MIN_SCENARIOS_REQUIRED: 2
+MAX_CORRUPTION_RATE: 0.5
+Person_10 is selected for analysis
+Aggregated features for person:
+[  1.625356   5.481086   1.740069   3.691572   6.493868   0.589039
+  87.693571  24.482816 218.273612 179.775159  43.379581 163.293912
+ 118.524815   0.058978   0.163282  -0.173613   0.617611   0.727398
+   0.138265 212.661605   0.998567   0.384845   0.408171   1.299524
+   0.208342   0.326968   0.677279   0.38616  159.313333 359.87
+ 358.89      43.379581 163.293912 118.524815 138.         1.039846
+   0.540384   0.10642   32.822546  89.303469   0.939569 153.333333]
+
+Processing Person_11
+Total scenarios for person Person_11: 3
+
+ Scenario 1/3: 11-A.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\11-A.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 325 total records, 305 valid records, useful duration: 304.00 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 305, positions: (305, 3), rotations: (305, 3), forward_vectors: (305, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (305, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (305, 3), sample: [[0.29 0.44 1.45]
+ [0.27 0.39 1.45]
+ [0.27 0.29 1.45]]
+DEBUG: Rotations shape: (305, 3), sample: [[ 11.89 356.38 324.46]
+ [ 11.92 354.72 294.01]
+ [ 11.64 355.28 242.  ]]
+DEBUG: Forwards shape: (305, 3), sample: [[-0.57  0.8  -0.21]
+ [-0.89  0.4  -0.21]
+ [-0.86 -0.46 -0.2 ]]
+DEBUG: Timestamps shape: (305,), sample: [12.78     13.770728 14.761439]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [0.331082 0.415574 1.442131], Std position: [0.054579 0.056351 0.029215], Total distance: 12.379955550466244
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 35.980164 342.079967 230.070984], Std rotation: [ 80.955066  65.996473 137.703641]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [-0.169115  0.62259  -0.246295], Std forward: [0.502065 0.479352 0.202901]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 303.9999990463257, Mean delta time: 0.9999999968629134
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.04072353799495475, Std speed: 0.031619885157666255, Max speed: 0.17233687939614084
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.028447166768570696, Std acceleration: 0.038374593627889524
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.9584662015687019
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.040723538122708014
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [359.53 359.63 359.57], Std rotation dynamic: [ 80.955066  65.996473 137.703641]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 227
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.7764523102482808, Speed autocorrelation: 0.26536530804604436
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 0.08062257748298553, Path efficiency: 0.006512347896107687
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [0.002979 0.003175 0.000853]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 184
+DEBUG: Total features extracted: 42
+Features extracted:
+[  0.331082   0.415574   1.442131   0.054579   0.056351   0.029215
+  12.379956  35.980164 342.079967 230.070984  80.955066  65.996473
+ 137.703641  -0.169115   0.62259   -0.246295   0.502065   0.479352
+   0.202901 303.999999   1.         0.040724   0.03162    0.172337
+   0.028447   0.038375   0.958466   0.040724 359.53     359.63
+ 359.57      80.955066  65.996473 137.703641 227.         0.776452
+   0.265365   0.006512   0.002979   0.003175   0.000853 184.      ]
+Feature vector length: 42
+
+ Scenario 2/3: 11-B.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\11-B.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 347 total records, 324 valid records, useful duration: 323.00 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 324, positions: (324, 3), rotations: (324, 3), forward_vectors: (324, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (324, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (324, 3), sample: [[-0.02 -0.22  1.44]
+ [-0.01 -0.22  1.43]
+ [-0.02 -0.22  1.43]]
+DEBUG: Rotations shape: (324, 3), sample: [[ 17.27 356.56   6.17]
+ [ 21.71 357.18  25.28]
+ [ 23.92 355.17   5.6 ]]
+DEBUG: Forwards shape: (324, 3), sample: [[ 0.1   0.95 -0.3 ]
+ [ 0.4   0.84 -0.37]
+ [ 0.09  0.91 -0.41]]
+DEBUG: Timestamps shape: (324,), sample: [11.158588 12.16     13.16    ]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [9.049414 9.00142  2.357994], Std position: [11.425482 14.950947  1.91889 ], Total distance: 627.9212909434737
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 14.119969 354.022284 179.234568], Std rotation: [  6.003566  19.716334 113.482904]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.071265  0.100401 -0.242191], Std forward: [0.710684 0.641955 0.095587]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 323.00141525268555, Mean delta time: 1.0000043815872617
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 1.9440287645308783, Std speed: 0.8124174614795004, Max speed: 2.7645795340340635
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.42263688692068035, Std acceleration: 0.6973846848668287
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 1.2493242633675192
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 1.9440202466365288
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [ 41.75 359.08 359.95], Std rotation dynamic: [  6.003566  19.716334 113.482904]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 134
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.4179040332644195, Speed autocorrelation: 0.6261864140496897
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 26.906932192280856, Path efficiency: 0.04285080404241788
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [130.541642 223.530815   3.682141]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 285
+DEBUG: Total features extracted: 42
+Features extracted:
+[  9.049414   9.00142    2.357994  11.425482  14.950947   1.91889
+ 627.921291  14.119969 354.022284 179.234568   6.003566  19.716334
+ 113.482904   0.071265   0.100401  -0.242191   0.710684   0.641955
+   0.095587 323.001415   1.000004   1.944029   0.812417   2.76458
+   0.422637   0.697385   1.249324   1.94402   41.75     359.08
+ 359.95       6.003566  19.716334 113.482904 134.         0.417904
+   0.626186   0.042851 130.541642 223.530815   3.682141 285.      ]
+Feature vector length: 42
+
+ Scenario 3/3: 11-C.json
+DEBUG load_head_data: Starting to load data from D:\Docs\Licenta\Proiect_Licenta\data\vr_recordings\11-C.json
+DEBUG load_head_data: Attempting to open and load JSON file
+DEBUG load_head_data: JSON loaded successfully
+DEBUG load_head_data: Parsing each recording...
+SUCCESS - Data loaded and filtered: 310 total records, 290 valid records, useful duration: 289.00 seconds.
+DEBUG load_head_data: Returning filtered data
+Loaded timestamps: 290, positions: (290, 3), rotations: (290, 3), forward_vectors: (290, 3)
+Axes reordered to [X,Z,Y] for VR consistency.
+Extracting features
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (290, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (290, 3), sample: [[ 2.23 -1.31  0.51]
+ [ 2.07 -1.23  0.5 ]
+ [ 2.   -1.02  0.5 ]]
+DEBUG: Rotations shape: (290, 3), sample: [[ 20.14 352.04  90.14]
+ [ 24.41 355.62  45.45]
+ [ 24.43 354.32   4.76]]
+DEBUG: Forwards shape: (290, 3), sample: [[ 0.94  0.   -0.34]
+ [ 0.65  0.64 -0.41]
+ [ 0.08  0.91 -0.41]]
+DEBUG: Timestamps shape: (290,), sample: [11.02     12.019512 13.02    ]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [13.695621  0.178207  1.276034], Std position: [10.749009  4.920155  1.529518], Total distance: 136.77118683619614
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 26.841172 352.425862 179.561966], Std rotation: [ 44.081276  20.195997 104.248964]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.019724  0.056379 -0.350138], Std forward: [0.735634 0.567694 0.100526]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 288.9999895095825, Mean delta time: 0.9999999637009775
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.47325670185534996, Std speed: 0.2652675036152296, Max speed: 0.9546727187890097
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.213250884609352, Std acceleration: 0.29335890161088146
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 1.1133884789719073
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.4732567190341062
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [354.13 346.48 358.65], Std rotation dynamic: [ 44.081276  20.195997 104.248964]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 105
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.5605150493913303, Speed autocorrelation: 0.388496420832913
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 7.01081307695477, Path efficiency: 0.05125942999493938
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [115.54119   24.207927   2.339427]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 246
+DEBUG: Total features extracted: 42
+Features extracted:
+[ 13.695621   0.178207   1.276034  10.749009   4.920155   1.529518
+ 136.771187  26.841172 352.425862 179.561966  44.081276  20.195997
+ 104.248964   0.019724   0.056379  -0.350138   0.735634   0.567694
+   0.100526 288.99999    1.         0.473257   0.265268   0.954673
+   0.213251   0.293359   1.113388   0.473257 354.13     346.48
+ 358.65      44.081276  20.195997 104.248964 105.         0.560515
+   0.388496   0.051259 115.54119   24.207927   2.339427 246.      ]
+Feature vector length: 42
+Person: Person_11
+ Total scenarios: 3
+ Valid scenarios: 3
+ Corruption rate: 0.00
+MIN_SCENARIOS_REQUIRED: 2
+MAX_CORRUPTION_RATE: 0.5
+Person_11 is selected for analysis
+Aggregated features for person:
+[  7.692039   3.1984     1.692053   7.40969    6.642485   1.159208
+ 259.024144  25.647102 349.509371 196.289172  43.679969  35.302934
+ 118.478503  -0.026042   0.25979   -0.279541   0.649461   0.563001
+   0.133005 305.333801   1.000001   0.819336   0.369768   1.297196
+   0.221445   0.343039   1.10706    0.819334 251.803333 355.063333
+ 359.39      43.679969  35.302934 118.478503 155.333333   0.584957
+   0.426683   0.033541  82.028604  82.580639   2.007474 238.333333]
+
+Running disability analysis for 3 persons
+
+ Results saved as: behavioral_classification.json
+
+Behavioral disability assessment results:
+ Person: Person_1, Status: HIGH, Final Score: 0.8945, Cluster: 2
+ Person: Person_10, Status: HIGH, Final Score: 0.8644, Cluster: 0
+ Person: Person_11, Status: HIGH, Final Score: 1.0000, Cluster: 1
+
+
+# STEP 8: create_visual_disability_report
+
+behavioral_variation_report 
+
+It is based on:
+
+the disability_assessment dict returned by analyze_person_disability(...)
+each person’s final_score
+each person’s status (HIGH/MEDIUM/LOW/NONE)
+
+# STEP 9: plot_person_dendrogram
+
+participant_similarity_dendrogram ( the file reflects the behavioral similarity of the selected persons based on their combined feature vectors after preprocessing and standardization.)
+
+# STEP 10: create_disability_report
+
+behavioral_report_20260531_202737
+behavioral_report_20260531_202737
+
+(based on analyze_person_disability)
+
+# STEP 11: plot_disability_annotations
+
+(changed only the output directions)
+Person_11_11-A_3d_path
+Person_11_11-B_3d_path
+Person_11_11-C_3d_path
+
+# STEP 12: save_detailed_results
+
+behavioral_classification.json
+
+# STEP 13: detect_disability_patterns_unsupervised
+
+behavioral_pattern_space.png
+
+Testing detect_disability_patterns_unsupervised per participant
+
+Running detect_disability_patterns_unsupervised for Person_1
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (268, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (268, 3), sample: [[0.16 0.26 1.17]
+ [0.27 0.37 1.2 ]
+ [0.22 0.28 1.23]]
+DEBUG: Rotations shape: (268, 3), sample: [[ 28.39   0.14 265.54]
+ [ 14.12   3.64 343.24]
+ [  4.31   2.17 274.7 ]]
+DEBUG: Forwards shape: (268, 3), sample: [[-0.88 -0.07 -0.48]
+ [-0.28  0.93 -0.24]
+ [-0.99  0.08 -0.08]]
+DEBUG: Timestamps shape: (268,), sample: [11.710594 12.70269  13.70107 ]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [0.27291  0.047836 1.167388], Std position: [0.080454 0.111629 0.037044], Total distance: 18.264788306636746
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 40.657724 157.805075 182.14459 ], Std rotation: [ 65.566424 174.436854  82.40552 ]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.006119 -0.273993 -0.422948], Std forward: [0.635101 0.541502 0.222494]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 266.9916763305664, Mean delta time: 0.9999688252081139
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.06840744684133612, Std speed: 0.05131427967970295, Max speed: 0.27313000567495327
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.04014080763712976, Std acceleration: 0.05566162744670956
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.8804587584720808
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.06840957949573992
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [357.14 359.91 352.68], Std rotation dynamic: [ 65.566424 174.436854  82.40552 ]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 221
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.7501270994475356, Speed autocorrelation: 0.4092379391819303
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 0.17233687939614087, Path efficiency: 0.009435470945673104
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [0.006473 0.012461 0.001372]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 214
+DEBUG: Total features extracted: 42
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (289, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (289, 3), sample: [[0.02 0.64 1.15]
+ [0.05 0.62 1.15]
+ [0.01 0.64 1.15]]
+DEBUG: Rotations shape: (289, 3), sample: [[ 43.1  355.03 211.59]
+ [ 42.8  357.74 206.47]
+ [ 43.94 352.98 208.64]]
+DEBUG: Forwards shape: (289, 3), sample: [[-0.38 -0.62 -0.68]
+ [-0.33 -0.66 -0.68]
+ [-0.35 -0.63 -0.69]]
+DEBUG: Timestamps shape: (289,), sample: [11.870751 12.868055 13.875012]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [9.466851 7.38263  2.294637], Std position: [11.382384 14.295222  1.880534], Total distance: 486.5435969623412
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 43.731315 147.58     208.997716], Std rotation: [ 95.706994 174.412284 106.818325]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [-0.042111  0.104775 -0.210484], Std forward: [0.73302  0.604753 0.200654]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 288.0064458847046, Mean delta time: 1.0000223815441132
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 1.6893874894525736, Std speed: 1.009666532922307, Max speed: 3.046621079162946
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.42357458519558555, Std acceleration: 0.734830422285934
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 1.0886143059814524
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 1.6893496791982061
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [359.73 359.99 359.58], Std rotation dynamic: [ 95.706994 174.412284 106.818325]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 101
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.5976524268268837, Speed autocorrelation: 0.7345191126002174
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 42.58664227196128, Path efficiency: 0.0875289337643005
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [129.558661 204.353365   3.536407]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 258
+DEBUG: Total features extracted: 42
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (296, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (296, 3), sample: [[0.18 0.28 0.76]
+ [0.15 0.23 0.81]
+ [0.05 0.18 0.75]]
+DEBUG: Rotations shape: (296, 3), sample: [[  8.78   2.93   2.69]
+ [348.18   5.5  341.9 ]
+ [ 18.87   1.53 277.43]]
+DEBUG: Forwards shape: (296, 3), sample: [[ 0.05  0.99 -0.15]
+ [-0.3   0.93  0.2 ]
+ [-0.94  0.12 -0.32]]
+DEBUG: Timestamps shape: (296,), sample: [11.78192  12.785199 13.787554]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [-1.372061  8.173412  0.552669], Std position: [0.673562 3.453237 0.242643], Total distance: 30.55528261942152
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 39.553176 102.665912 161.788074], Std rotation: [ 77.626022 158.981337 104.073326]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.175777 -0.018818 -0.298345], Std forward: [0.567455 0.719714 0.199144]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 295.0180673599243, Mean delta time: 1.000061245287879
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.10357722921837803, Std speed: 0.14367888499784248, Max speed: 0.98254770876533
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.07967876717292494, Std acceleration: 0.14678190679608277
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.3803238326589746
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.10357088598964971
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [359.18 359.98 358.04], Std rotation dynamic: [ 77.626022 158.981337 104.073326]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 232
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 1.3871667168747654, Speed autocorrelation: 0.4794481440127568
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 10.62621757729438, Path efficiency: 0.3477702271534597
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [ 0.453685 11.924845  0.058876]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 233
+DEBUG: Total features extracted: 42
+Disability pattern detection results for Person_1:
+  1-A: cluster=2, score=0.846, variation_level=HIGH
+  1-B: cluster=0, score=1.000, variation_level=HIGH
+  1-C: cluster=1, score=0.759, variation_level=HIGH
+
+Running detect_disability_patterns_unsupervised for Person_10
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (220, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (220, 3), sample: [[-0.53 -0.29  1.31]
+ [-0.54 -0.27  1.34]
+ [-0.52 -0.27  1.36]]
+DEBUG: Rotations shape: (220, 3), sample: [[ 23.47   1.28 200.33]
+ [  8.69   4.49 214.92]
+ [  9.17   1.78 212.75]]
+DEBUG: Forwards shape: (220, 3), sample: [[-0.32 -0.86 -0.4 ]
+ [-0.57 -0.81 -0.15]
+ [-0.53 -0.83 -0.16]]
+DEBUG: Timestamps shape: (220,), sample: [11.790778 12.790665 13.781573]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [-0.223682 -0.303364  1.361591], Std position: [0.182728 0.075188 0.014885], Total distance: 10.295430980483298
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 50.598227 175.075591 186.114818], Std rotation: [111.177617 177.896907 114.931718]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.053364  0.072364 -0.138682], Std forward: [0.586259 0.780066 0.145773]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 218.99503421783447, Mean delta time: 0.9999773251955912
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.047011100367503646, Std speed: 0.03881230215280822, Max speed: 0.2027313493271329
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.028136230810457862, Std acceleration: 0.040547991846332176
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.7432294153459543
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.04701216635918067
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [359.38 359.77 358.84], Std rotation dynamic: [111.177617 177.896907 114.931718]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 186
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.8255986745555346, Speed autocorrelation: 0.4566945305705195
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 0.3522782990761708, Path efficiency: 0.03421695504966941
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [0.03339  0.005653 0.000222]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 147
+DEBUG: Total features extracted: 42
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (238, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (238, 3), sample: [[-0.9  -0.19  1.25]
+ [-0.9  -0.19  1.25]
+ [-0.83 -0.4   1.36]]
+DEBUG: Rotations shape: (238, 3), sample: [[ 45.49  18.7    8.44]
+ [ 45.49  18.7    8.44]
+ [ 30.97   4.07 358.71]]
+DEBUG: Forwards shape: (238, 3), sample: [[ 0.1   0.69 -0.71]
+ [ 0.1   0.69 -0.71]
+ [-0.02  0.86 -0.51]]
+DEBUG: Timestamps shape: (238,), sample: [11.099946 11.099999 12.089681]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [ 4.746218 12.848361  3.356008], Std position: [ 9.868468 16.011942  1.677155], Total distance: 219.91944922216632
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 11.862395 291.215462 183.402017], Std rotation: [ 13.612985 135.867725 122.810211]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.020798  0.214874 -0.192647], Std forward: [0.606308 0.71714  0.181967]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 236.00004482269287, Mean delta time: 0.995780779842586
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.9279301654943727, Std speed: 0.9594091208291399, Max speed: 2.7278013124126184
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.43746249585671454, Std acceleration: 0.6993059716881319
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.7769148993839635
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.9318618959898591
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [ 79.45 359.87 359.6 ], Std rotation dynamic: [ 13.612985 135.867725 122.810211]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 121
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 1.0339238409368836, Speed autocorrelation: 0.7348149369946334
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 34.12572197038474, Path efficiency: 0.15517373334229462
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [ 97.386657 256.382298   2.812848]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 179
+DEBUG: Total features extracted: 42
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (184, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (184, 3), sample: [[0.04 0.66 0.46]
+ [0.58 0.39 0.47]
+ [0.79 0.62 0.42]]
+DEBUG: Rotations shape: (184, 3), sample: [[ 26.73   6.68 274.04]
+ [ 22.83   0.82 312.18]
+ [ 41.24   0.55 304.32]]
+DEBUG: Forwards shape: (184, 3), sample: [[-0.89  0.06 -0.45]
+ [-0.68  0.62 -0.39]
+ [-0.62  0.42 -0.66]]
+DEBUG: Timestamps shape: (184,), sample: [11.74 12.74 13.74]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [0.353533 3.898261 0.502609], Std position: [1.02352  3.394474 0.075078], Total distance: 32.86583141374027
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 10.987826 188.529783 169.808641], Std rotation: [  5.348141 176.117103 117.832515]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.102772  0.202609 -0.189511], Std forward: [0.660266 0.684986 0.087055]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 182.98973655700684, Mean delta time: 0.9999439156120592
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.17959470717890857, Std speed: 0.2262919270219097, Max speed: 0.9680392554023831
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.1594267568216542, Std acceleration: 0.24105117665928832
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.5116921814964959
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.1796047802030775
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [ 39.11 359.97 358.23], Std rotation dynamic: [  5.348141 176.117103 117.832515]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 107
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 1.260014454638033, Speed autocorrelation: 0.4296416828448264
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 4.2682549127248715, Path efficiency: 0.1298690685469906
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [ 1.047592 11.522456  0.005637]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 134
+DEBUG: Total features extracted: 42
+Disability pattern detection results for Person_10:
+  10-A: cluster=2, score=0.842, variation_level=HIGH
+  10-B: cluster=0, score=1.000, variation_level=HIGH
+  10-C: cluster=1, score=0.725, variation_level=HIGH
+
+Running detect_disability_patterns_unsupervised for Person_11
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (305, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (305, 3), sample: [[0.29 0.44 1.45]
+ [0.27 0.39 1.45]
+ [0.27 0.29 1.45]]
+DEBUG: Rotations shape: (305, 3), sample: [[ 11.89 356.38 324.46]
+ [ 11.92 354.72 294.01]
+ [ 11.64 355.28 242.  ]]
+DEBUG: Forwards shape: (305, 3), sample: [[-0.57  0.8  -0.21]
+ [-0.89  0.4  -0.21]
+ [-0.86 -0.46 -0.2 ]]
+DEBUG: Timestamps shape: (305,), sample: [12.78     13.770728 14.761439]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [0.331082 0.415574 1.442131], Std position: [0.054579 0.056351 0.029215], Total distance: 12.379955550466244
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 35.980164 342.079967 230.070984], Std rotation: [ 80.955066  65.996473 137.703641]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [-0.169115  0.62259  -0.246295], Std forward: [0.502065 0.479352 0.202901]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 303.9999990463257, Mean delta time: 0.9999999968629134
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.04072353799495475, Std speed: 0.031619885157666255, Max speed: 0.17233687939614084
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.028447166768570696, Std acceleration: 0.038374593627889524
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 0.9584662015687019
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.040723538122708014
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [359.53 359.63 359.57], Std rotation dynamic: [ 80.955066  65.996473 137.703641]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 227
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.7764523102482808, Speed autocorrelation: 0.26536530804604436
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 0.08062257748298553, Path efficiency: 0.006512347896107687
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [0.002979 0.003175 0.000853]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 184
+DEBUG: Total features extracted: 42
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (324, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (324, 3), sample: [[-0.02 -0.22  1.44]
+ [-0.01 -0.22  1.43]
+ [-0.02 -0.22  1.43]]
+DEBUG: Rotations shape: (324, 3), sample: [[ 17.27 356.56   6.17]
+ [ 21.71 357.18  25.28]
+ [ 23.92 355.17   5.6 ]]
+DEBUG: Forwards shape: (324, 3), sample: [[ 0.1   0.95 -0.3 ]
+ [ 0.4   0.84 -0.37]
+ [ 0.09  0.91 -0.41]]
+DEBUG: Timestamps shape: (324,), sample: [11.158588 12.16     13.16    ]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [9.049414 9.00142  2.357994], Std position: [11.425482 14.950947  1.91889 ], Total distance: 627.9212909434737
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 14.119969 354.022284 179.234568], Std rotation: [  6.003566  19.716334 113.482904]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.071265  0.100401 -0.242191], Std forward: [0.710684 0.641955 0.095587]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 323.00141525268555, Mean delta time: 1.0000043815872617
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 1.9440287645308783, Std speed: 0.8124174614795004, Max speed: 2.7645795340340635
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.42263688692068035, Std acceleration: 0.6973846848668287
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 1.2493242633675192
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 1.9440202466365288
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [ 41.75 359.08 359.95], Std rotation dynamic: [  6.003566  19.716334 113.482904]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 134
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.4179040332644195, Speed autocorrelation: 0.6261864140496897
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 26.906932192280856, Path efficiency: 0.04285080404241788
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [130.541642 223.530815   3.682141]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 285
+DEBUG: Total features extracted: 42
+DEBUG: Starting feature extraction...
+DEBUG: Input scenario_data shape: (290, 10)
+DEBUG: Extracting positions, rotations, forwards, and timestamps...
+DEBUG: Positions shape: (290, 3), sample: [[ 2.23 -1.31  0.51]
+ [ 2.07 -1.23  0.5 ]
+ [ 2.   -1.02  0.5 ]]
+DEBUG: Rotations shape: (290, 3), sample: [[ 20.14 352.04  90.14]
+ [ 24.41 355.62  45.45]
+ [ 24.43 354.32   4.76]]
+DEBUG: Forwards shape: (290, 3), sample: [[ 0.94  0.   -0.34]
+ [ 0.65  0.64 -0.41]
+ [ 0.08  0.91 -0.41]]
+DEBUG: Timestamps shape: (290,), sample: [11.02     12.019512 13.02    ]
+DEBUG: Initializing features list...
+DEBUG: Calculating position statistics...
+DEBUG: Mean position: [13.695621  0.178207  1.276034], Std position: [10.749009  4.920155  1.529518], Total distance: 136.77118683619614
+DEBUG: Calculating rotation statistics...
+DEBUG: Mean rotation: [ 26.841172 352.425862 179.561966], Std rotation: [ 44.081276  20.195997 104.248964]
+DEBUG: Calculating forward direction statistics...
+DEBUG: Mean forward: [ 0.019724  0.056379 -0.350138], Std forward: [0.735634 0.567694 0.100526]
+DEBUG: Calculating time-based features...
+DEBUG: Total time: 288.9999895095825, Mean delta time: 0.9999999637009775
+DEBUG: Calculating movement speeds...
+DEBUG: Mean speed: 0.47325670185534996, Std speed: 0.2652675036152296, Max speed: 0.9546727187890097
+DEBUG: Calculating acceleration...
+DEBUG: Mean acceleration: 0.213250884609352, Std acceleration: 0.29335890161088146
+DEBUG: Calculating movement entropy...
+DEBUG: Movement entropy: 1.1133884789719073
+DEBUG: Calculating average speed over time...
+DEBUG: Average speed over time: 0.4732567190341062
+DEBUG: Calculating rotation ranges and stds...
+DEBUG: Peak-to-peak rotation: [354.13 346.48 358.65], Std rotation dynamic: [ 44.081276  20.195997 104.248964]
+DEBUG: Counting sharp turns...
+DEBUG: Sharp turns: 105
+DEBUG: Calculating speed variability and autocorrelation...
+DEBUG: Speed CV: 0.5605150493913303, Speed autocorrelation: 0.388496420832913
+DEBUG: Calculating path efficiency...
+DEBUG: Direct distance: 7.01081307695477, Path efficiency: 0.05125942999493938
+DEBUG: Calculating position variance...
+DEBUG: Position variance: [115.54119   24.207927   2.339427]
+DEBUG: Calculating unique movement directions...
+DEBUG: Unique movement directions: 246
+DEBUG: Total features extracted: 42
+Disability pattern detection results for Person_11:
+  11-A: cluster=1, score=1.000, variation_level=HIGH
+  11-B: cluster=0, score=0.922, variation_level=HIGH
+  11-C: cluster=2, score=0.600, variation_level=MEDIUM
+
+STEP 14: load_ground_truth
+
+Debug: Testing ground_truth_handler.py
+Looking for ground truth at: D:\Docs\Licenta\Proiect_Licenta\data\ground_truth\ground_truth.csv
+Success: Loaded 19 ground truth records.
+Successfully mapped 19 persons.
+Selected persons from ground truth:
+ Person_1: 0
+ Person_10: 0
+ Person_11: 1
+Debug: Testing sync_data function
+Synchronized 3 subjects for evaluation.
+
+Aligned Data Results:
+ ID: Person_1 | True: 0      | Pred: NONE  
+ ID: Person_10 | True: 0      | Pred: HIGH  
+ ID: Person_11 | True: 1      | Pred: MEDIUM
+
+Sync Logic Verification: Passed.
+
+STEP 15: calculate_and_plot_metrics + export_evaluation_summary
+
+Debug: Testing metrics.py with actual results for Person_1, Person_10, and Person_11
+Looking for ground truth at: D:\Docs\Licenta\Proiect_Licenta\data\ground_truth\ground_truth.csv
+Success: Loaded 19 ground truth records.
+Added Person_1: ground_truth=0, predicted_status=HIGH, predicted_binary=1
+Added Person_10: ground_truth=0, predicted_status=HIGH, predicted_binary=1
+Added Person_11: ground_truth=1, predicted_status=HIGH, predicted_binary=1
+ Running metric calculations on selected persons...
+
+ Overall accurcy: 33.33%
+
+ Detailed clasification report:
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00         2
+           1       0.33      1.00      0.50         1
+
+    accuracy                           0.33         3
+   macro avg       0.17      0.50      0.25         3
+weighted avg       0.11      0.33      0.17         3
+
+Success: Confusion matrix saved as 'confusion_matrix.png'.
+Testing summary export...
+Success: Evaluation summary exported to D:\Docs\Licenta\Proiect_Licenta\data\output\evaluation_results\evaluation_summary.json
+Debug complete: All selected persons evaluated.
+
