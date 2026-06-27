@@ -1,0 +1,123 @@
+{
+  "n_healthy": 14,
+  "n_disabled": 5,
+  "u_statistic": 62.0,
+  "u_max": 70.0,
+  "p_value_two_sided": 0.010319917440660475,
+  "p_value_one_sided": 0.005159958720330237,
+  "effect_size_r": 0.7714285714285714,
+  "effect_size_ci_95": [
+    0.3143,
+    1.0
+  ],
+  "probability_superiority": 0.8857142857142857,
+  "direction": "atypical > typical",
+  "effect_label": "MAJOR",
+  "effect_description": "Difference between groups is major",
+  "significance": "Significant (p < 0.05)",
+  "reject_h0_alpha05": true,
+  "reject_h0_alpha10": true,
+  "median_healthy": 0.42518158734506106,
+  "median_disabled": 0.6703996978894464,
+  "mean_healthy": 0.4214335947285229,
+  "mean_disabled": 0.6782246934844371,
+  "std_healthy": 0.12646123756414557,
+  "std_disabled": 0.1692687801752364,
+  "per_person_scores": [
+    {
+      "person": "Person_1",
+      "true_label": false,
+      "final_score": 0.47482260253998254
+    },
+    {
+      "person": "Person_10",
+      "true_label": false,
+      "final_score": 0.5859826672426329
+    },
+    {
+      "person": "Person_11",
+      "true_label": true,
+      "final_score": 0.4949453098479074
+    },
+    {
+      "person": "Person_12",
+      "true_label": false,
+      "final_score": 0.5201225179014766
+    },
+    {
+      "person": "Person_13",
+      "true_label": false,
+      "final_score": 0.40309919557829405
+    },
+    {
+      "person": "Person_14",
+      "true_label": false,
+      "final_score": 0.3725508286719129
+    },
+    {
+      "person": "Person_15",
+      "true_label": false,
+      "final_score": 0.32930313818835116
+    },
+    {
+      "person": "Person_16",
+      "true_label": false,
+      "final_score": 0.5763580172219073
+    },
+    {
+      "person": "Person_17",
+      "true_label": false,
+      "final_score": 0.2568004367988913
+    },
+    {
+      "person": "Person_18",
+      "true_label": false,
+      "final_score": 0.3141424854419302
+    },
+    {
+      "person": "Person_19",
+      "true_label": false,
+      "final_score": 0.4472639791118281
+    },
+    {
+      "person": "Person_2",
+      "true_label": false,
+      "final_score": 0.45120158358371887
+    },
+    {
+      "person": "Person_3",
+      "true_label": false,
+      "final_score": 0.28829779030965375
+    },
+    {
+      "person": "Person_4",
+      "true_label": true,
+      "final_score": 0.6703996978894464
+    },
+    {
+      "person": "Person_5",
+      "true_label": true,
+      "final_score": 0.49128296123797327
+    },
+    {
+      "person": "Person_6",
+      "true_label": false,
+      "final_score": 0.2274306459171766
+    },
+    {
+      "person": "Person_7",
+      "true_label": true,
+      "final_score": 0.9072502130893823
+    },
+    {
+      "person": "Person_8",
+      "true_label": false,
+      "final_score": 0.6526944376915633
+    },
+    {
+      "person": "Person_9",
+      "true_label": true,
+      "final_score": 0.8272452853574765
+    }
+  ]
+}

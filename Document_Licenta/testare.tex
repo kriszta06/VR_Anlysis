@@ -1,0 +1,197 @@
+% =====================================================================
+%  Capitol / Secțiune: Testarea automată a aplicației
+%  Se poate include în main.tex prin: \input{testare}
+% =====================================================================
+
+\section{Testarea automată a sistemului}
+\label{sec:testare}
+
+\subsection{Rolul și obiectivele testării}
+
+Testarea automată reprezintă o componentă esențială a procesului de dezvoltare
+a aplicației, având rolul de a verifica în mod sistematic și reproductibil
+corectitudinea funcțională a fiecărei unități de cod. Într-un sistem de
+prelucrare a datelor și de analiză comportamentală, în care rezultatele finale
+(clasificarea participanților, estimarea gradului de dizabilitate, metricile de
+evaluare) depind de un lanț lung de transformări numerice, o singură eroare
+introdusă într-o funcție de bază se poate propaga silențios până la concluziile
+științifice. Suita de teste are tocmai rolul de a interpune o barieră de
+verificare automată între implementare și utilizare.
+
+Obiectivele urmărite prin construirea suitei de teste au fost următoarele:
+
+\begin{itemize}
+  \item \textbf{Verificarea corectitudinii funcționale} a fiecărei funcții
+        publice din modulele aplicației, pe baza unor date de intrare cu
+        rezultat cunoscut a priori.
+  \item \textbf{Protejarea împotriva regresiilor}: orice modificare ulterioară a
+        codului poate fi validată prin re-rularea suitei, asigurând că
+        funcționalitățile deja corecte nu sunt deteriorate.
+  \item \textbf{Documentarea executabilă a comportamentului așteptat}: testele
+        descriu, prin exemple concrete, contractul fiecărei funcții (intrări
+        valide, valori de frontieră, cazuri degenerate), constituind o formă de
+        specificație vie a codului.
+  \item \textbf{Validarea robusteții} în fața cazurilor limită (date lipsă,
+        traiectorii cu un singur cadru, distribuții identice, clase unice),
+        care apar frecvent în datele experimentale reale.
+  \item \textbf{Izolarea defectelor}: în cazul unei erori, granularitatea fină a
+        testelor permite localizarea rapidă a modulului și a funcției
+        responsabile.
+\end{itemize}
+
+\subsection{Metodologia de testare}
+
+Strategia adoptată este aceea a \emph{testării unitare} (unit testing),
+completată de elemente de \emph{testare comportamentală} și de verificare a
+cazurilor de frontieră. Fiecare test urmează tiparul \emph{Arrange--Act--Assert}
+(pregătirea datelor de intrare, apelul funcției testate, verificarea
+rezultatului prin aserțiuni), ceea ce asigură lizibilitate și o corespondență
+clară între intenția testului și implementarea sa.
+
+Categoriile de teste utilizate sunt:
+
+\begin{itemize}
+  \item \textbf{Teste de corectitudine numerică} --- verifică egalitatea
+        (eventual aproximativă, cu toleranță controlată) între valoarea
+        calculată și cea așteptată teoretic; de exemplu, faptul că distanța
+        totală parcursă este nulă pentru o traiectorie staționară.
+  \item \textbf{Teste de proprietate / invarianți} --- verifică faptul că
+        rezultatul respectă constrângeri structurale independente de datele
+        concrete: eficiența traiectoriei este întotdeauna în intervalul
+        $[0,1]$, procentele aferente grupurilor de clustering însumează
+        $100\%$, vectorul de trăsături nu conține valori \texttt{NaN} sau
+        infinite.
+  \item \textbf{Teste de cazuri limită} (edge cases) --- traiectorii cu un
+        singur cadru sau cu număr minim de cadre, distribuții complet
+        separate sau identice în testele statistice, seturi de date vide.
+  \item \textbf{Teste de regresie} --- introduse explicit în urma identificării
+        și corectării unor defecte, pentru a garanta că acestea nu reapar.
+\end{itemize}
+
+\subsection{Implementarea suitei de teste}
+
+\paragraph{Cadrul de testare.} Suita este implementată folosind
+\texttt{pytest}, cadrul standard de facto pentru testarea în Python, ales pentru
+sintaxa concisă a aserțiunilor (utilizarea directă a instrucțiunii
+\texttt{assert}), pentru mecanismul de \emph{fixtures} și pentru capacitățile
+avansate de colectare și raportare. Pentru comparațiile numerice se utilizează
+\texttt{pytest.approx} și funcțiile \texttt{numpy.testing} (de exemplu
+\texttt{assert\_array\_almost\_equal}), care permit specificarea unei toleranțe
+controlate, necesară din cauza erorilor de rotunjire inerente aritmeticii în
+virgulă mobilă.
+
+\paragraph{Organizarea.} Testele sunt grupate în directorul dedicat
+\texttt{tests/}, câte un fișier pentru fiecare modul al aplicației, iar în
+interiorul fiecărui fișier testele sunt structurate pe clase care corespund
+funcțiilor publice testate (de exemplu \texttt{TestComputeMannWhitney},
+\texttt{TestPerformAgglomerativeClustering}). Această corespondență directă
+între structura testelor și structura codului facilitează navigarea și
+mentenanța.
+
+\paragraph{Configurarea mediului.} Fișierul \texttt{conftest.py} configurează
+calea de import (\texttt{sys.path}) astfel încât modulele din \texttt{src/} să
+poată fi importate de teste, asigurând independența suitei față de modul de
+lansare. Generarea graficelor cu \texttt{matplotlib} este comutată pe backend-ul
+neinteractiv \texttt{Agg}, pentru ca testele să poată rula într-un mediu fără
+interfață grafică (de exemplu pe un server de integrare continuă).
+
+\paragraph{Izolarea dependențelor.} Pentru a testa fiecare unitate independent
+de dependențele sale externe sau costisitoare, s-a folosit tehnica
+\emph{mocking}-ului (prin \texttt{unittest.mock}). Astfel, funcțiile de
+încărcare a datelor de pe disc, modulul de configurare și anumite biblioteci de
+vizualizare sunt înlocuite cu obiecte simulate (\emph{mock objects}), care
+returnează valori controlate. Aceasta permite testarea logicii unei funcții
+fără a depinde de existența fișierelor reale de date VR, de starea sistemului de
+fișiere sau de randarea efectivă a graficelor. Operațiunile de scriere a
+fișierelor sunt redirecționate către directoare temporare furnizate de
+fixture-ul \texttt{tmp\_path}, astfel încât testele să nu producă efecte
+secundare persistente.
+
+\paragraph{Acoperirea.} Suita cuprinde \textbf{353 de teste} care acoperă toate
+modulele funcționale ale aplicației. Tabelul~\ref{tab:teste} prezintă
+distribuția testelor pe module, împreună cu responsabilitatea fiecărui modul
+testat.
+
+\begin{table}[ht]
+\centering
+\caption{Distribuția testelor pe module}
+\label{tab:teste}
+\small
+\begin{tabular}{l c p{6.5cm}}
+\hline
+\textbf{Modul testat} & \textbf{Nr. teste} & \textbf{Responsabilitate} \\
+\hline
+\texttt{optimize\_config}     & 55 & Optimizarea pragurilor și a ponderilor de decizie, încărcarea scorurilor, actualizarea configurației \\
+\texttt{file\_management}     & 49 & Gruparea fișierelor pe participant, agregarea trăsăturilor, gestionarea fișierelor de ieșire \\
+\texttt{disability\_engine}   & 40 & Determinarea numărului optim de clustere, estimarea statusului de dizabilitate, praguri derivate din date, analiza per participant \\
+\texttt{feature\_extractor}   & 26 & Extragerea vectorului de trăsături comportamentale din traiectorie \\
+\texttt{scenario\_comparison} & 22 & Compararea și vizualizarea scenariilor pe participanți \\
+\texttt{loocv}                & 21 & Validarea încrucișată leave-one-out, praguri Youden și F1 \\
+\texttt{ground\_truth\_handler} & 21 & Încărcarea și sincronizarea etichetelor de referință \\
+\texttt{reports}              & 20 & Generarea rapoartelor vizuale și a dendrogramelor \\
+\texttt{data\_loader}         & 20 & Parsarea vectorilor și încărcarea înregistrărilor VR \\
+\texttt{threshold\_calibrator}& 18 & Calibrarea pragului de decizie pe baza scorurilor \\
+\texttt{metrics}              & 18 & Calculul și exportul metricilor de evaluare \\
+\texttt{mann\_whitney}        & 18 & Testul statistic Mann--Whitney U și mărimea efectului \\
+\texttt{plotter\_3d}          & 15 & Vizualizarea tridimensională a clusterelor \\
+\texttt{clustering}           & 10 & Clusteringul aglomerativ ierarhic \\
+\hline
+\textbf{Total}                & \textbf{353} & \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Rezultate}
+
+În urma execuției complete a suitei, toate cele \textbf{353 de teste sunt
+trecute cu succes} (\emph{353 passed}), fără eșecuri sau erori. Timpul total de
+execuție este de aproximativ 40 de secunde, ceea ce face suita suficient de
+rapidă pentru a fi rulată frecvent în timpul dezvoltării. Avertismentele rămase
+(18 \emph{warnings}) provin din biblioteci externe (\texttt{numpy},
+\texttt{scikit-learn}) și corespund unor situații numerice degenerate
+\emph{intenționat} provocate de teste --- de exemplu calculul ariei de sub
+curba ROC (AUC) atunci când există o singură clasă în datele de referință ---,
+fără a indica defecte ale aplicației.
+
+\paragraph{Defecte identificate și corectate.} Procesul de testare și-a
+demonstrat utilitatea prin identificarea unui set de defecte, dintre care cele
+mai relevante au fost:
+
+\begin{itemize}
+  \item În modulul de testare statistică Mann--Whitney, câmpurile booleene de
+        decizie (\texttt{reject\_h0\_alpha05}) erau returnate ca tip boolean
+        \texttt{numpy} în loc de tipul boolean nativ Python, ceea ce afecta
+        comparațiile stricte de identitate; defectul a fost remediat prin
+        conversie explicită de tip.
+  \item În testele de extragere a trăsăturilor, indicii care identificau
+        trăsăturile \emph{eficiența traiectoriei} și \emph{rata de pauză} nu mai
+        corespundeau structurii actualizate a vectorului de trăsături (care a
+        fost extins cu descriptori suplimentari precum tremorul, jerk-ul și
+        asimetria direcțională); indicii au fost actualizați la pozițiile
+        corecte (37, respectiv 43).
+  \item Mai multe defecte erau cauzate de \emph{interferența} dintre module de
+        test care modificau global tabela de module a interpretorului
+        (\texttt{sys.modules}), substituind biblioteci reale cu obiecte
+        simulate; izolarea acestor substituiri a eliminat dependențele de ordine
+        dintre teste și a restabilit determinismul suitei.
+\end{itemize}
+
+Aceste corecții ilustrează rolul dublu al testării: pe de o parte validarea
+codului de producție, pe de altă parte menținerea calității și a izolării
+propriei infrastructuri de testare.
+
+\subsection{Reproductibilitate și limitări}
+
+Suita de teste este complet deterministă: generatoarele de numere aleatoare sunt
+inițializate cu semințe fixe (\texttt{seed}), astfel încât rezultatele sunt
+identice la fiecare rulare și independente de mediul de execuție. Lansarea se
+face printr-o singură comandă (\texttt{pytest tests/}), iar dependențele sunt
+cele declarate în mediul virtual al proiectului.
+
+Ca limitări, suita se concentrează pe testarea unitară și de proprietate, nu
+include teste de integrare \emph{end-to-end} care să parcurgă întregul flux de
+prelucrare pe date reale, și nu cuantifică explicit acoperirea de cod
+(\emph{code coverage}) printr-un instrument dedicat. Aceste direcții constituie
+posibile extinderi viitoare, alături de adăugarea unor teste de performanță și a
+integrării într-un sistem de integrare continuă (CI) care să ruleze automat
+suita la fiecare modificare a codului.
